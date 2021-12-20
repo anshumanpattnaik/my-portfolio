@@ -56,7 +56,6 @@ html, body {
             user-select: none;
 }
 .body-container > .intro-container {
-    height: 20em;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -87,4 +86,41 @@ html, body {
     font-size: 2rem;
     color: #FFF;
     margin-top: 0.1em;
+}
+.body-container > .intro-container > .button-container {
+    display: flex;
+    margin-top: 5em;
+}
+.body-container > .intro-container > .button-container > .projects-button {
+    width: 13.5em;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5em;
+    border: 2px solid #f42735;
+}
+.body-container > .intro-container > .button-container > .projects-button > .projects {
+    font-family: PoppinsBold, serif;
+    font-size: 1.1rem;
+    color: #f42735;
+}
+.body-container > .intro-container > .button-container > .projects-button > .right-arrow {
+    height: 2.7em;
+    margin-left: 0.9em;
+}
+.body-container > .intro-container > .button-container > .youtube-button {
+    width: 8em;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5em;
+    border: 2px solid #f42735;
+    background-color: #f42735;
+    margin-left: 2em;
+}
+.body-container > .intro-container > .button-container > .youtube-button > .material-icons {
+    font-size: 3rem;
+    color: #FFF;
 }
