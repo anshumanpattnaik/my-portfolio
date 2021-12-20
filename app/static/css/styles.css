@@ -1,0 +1,90 @@
+@font-face {
+    font-family: PoppinsRegular;
+    src: url(../font/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: PoppinsBold;
+    src: url(../font/Poppins-Bold.ttf);
+}
+
+html, body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #0d0e0e;
+}
+.nav-menu {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+}
+.nav-menu > .label-container > .label {
+    font-family: PoppinsBold, serif;
+    font-size: 1.5rem;
+    color: #f42735;
+    margin-left: 3em;
+}
+.nav-menu > .menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 3em;
+}
+.nav-menu > .menu-container > span {
+    font-family: PoppinsBold, serif;
+    font-size: 0.95rem;
+    color: #FFF;
+    margin: 2.5em;
+}
+.body-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.body-container > .x-label {
+    font-family: PoppinsBold, serif;
+    font-size: 50rem;
+    color: #111314;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.body-container > .intro-container {
+    height: 20em;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    margin-left: 3em;
+    /*background-color: aqua;*/
+}
+.body-container > .intro-container > .hello {
+    font-family: PoppinsBold, serif;
+    font-size: 2.2rem;
+    color: #FFF;
+}
+.body-container > .intro-container > .i-am {
+    font-family: PoppinsBold, serif;
+    font-size: 5rem;
+    color: #FFF;
+    margin-top: 0.1em;
+}
+.body-container > .intro-container > .i-am > .name {
+    font-family: PoppinsBold, serif;
+    font-size: 5rem;
+    color: #f42735;
+    margin-top: 0.1em;
+}
+.body-container > .intro-container > .software-developer {
+    font-family: PoppinsBold, serif;
+    font-size: 2rem;
+    color: #FFF;
+    margin-top: 0.1em;
+}
