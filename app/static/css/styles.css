@@ -55,10 +55,9 @@ html, body {
 }
 .body-container {
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
-    margin-top: 5vh;
 }
 .body-container > .x-label {
     font-family: PoppinsBold, serif;
@@ -198,7 +197,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     right: 0;
     margin-right: 1em;
 }
@@ -219,7 +218,65 @@ html, body {
         -ms-user-select: none;
             user-select: none;
 }
-
+.about-me-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #c20020;
+}
+.profile-container {
+    width: 80vw;
+    display: flex;
+    margin-left: 5em;
+}
+.profile-container > img {
+    width: 20em;
+    height: 20em;
+    margin-top: 1em;
+}
+.profile-container > .about-me {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5em;
+}
+.profile-container > .about-me > .about-me-label {
+    font-family: PoppinsBold, serif;
+    font-size: 3rem;
+    color: #FFF;
+}
+.profile-container > .about-me > .description {
+    font-family: PoppinsRegular, serif;
+    font-size: 1.2rem;
+    color: #FFF;
+    line-height: 2.5em;
+}
+.profile-container > .about-me > .description > .hackbotone {
+    font-family: PoppinsRegular, serif;
+    font-size: 1.1rem;
+    color: #dbdbdb;
+    text-decoration: none;
+}
+.profile-container > .about-me > .description > .hackbotone:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.profile-container > .about-me > .view-profile > button {
+    width: 15em;
+    height: 4em;
+    font-family: PoppinsBold, serif;
+    font-size: 1rem;
+    color: #FFFFFF;
+    margin-top: 2em;
+    transition: .3s;
+    border: 2.2px solid #FFFFFF;
+    background: transparent;
+}
+.profile-container > .about-me > .view-profile > button:hover {
+    cursor: pointer;
+    color: #f42735;
+    background: #FFFFFF;
+}
 @keyframes from-top-to-bottom {
   0% {top: -30px}
   100% {top: 0px}
