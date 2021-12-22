@@ -279,17 +279,17 @@ html, body {
 }
 @keyframes from-top-to-bottom {
   0% {top: -30px}
-  100% {top: 0px}
+  100% {top: 0}
 }
 @keyframes from-left-to-right {
   0% {left: -30px;}
-  100% {left: 0px}
+  100% {left: 0}
 }
 @keyframes from-right-to-left {
   0% {right: -100px;}
-  100% {right: 0px}
+  100% {right: 0}
 }
 @keyframes from-bottom-to-top {
   0% {bottom: -30px}
-  100% {bottom: 0px}
+  100% {bottom: 0}
 }
