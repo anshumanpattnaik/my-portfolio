@@ -35,11 +35,17 @@ html, body {
     justify-content: flex-end;
     margin-right: 3em;
 }
-.nav-menu > .menu-container > span {
+.nav-menu > .menu-container > a {
     font-family: PoppinsBold, serif;
     font-size: 0.95rem;
     color: #FFF;
+    text-decoration: none;
     margin: 2.5em;
+    transition: .3s;
+}
+.nav-menu > .menu-container > a:hover {
+    cursor: pointer;
+    color: #f42735;
 }
 .body-container {
     width: 100vw;
@@ -124,15 +130,24 @@ html, body {
     justify-content: center;
     border-radius: 5em;
     border: 2px solid #f42735;
+    transition: .3s;
 }
 .body-container > .intro-container > .button-container > .projects-button > .projects {
     font-family: PoppinsBold, serif;
     font-size: 1.1rem;
     color: #f42735;
+    transition: .3s;
 }
 .body-container > .intro-container > .button-container > .projects-button > .right-arrow {
     height: 2.7em;
     margin-left: 0.9em;
+}
+.body-container > .intro-container > .button-container > .projects-button:hover {
+    cursor: pointer;
+    /*background-color: #e82633;*/
+}
+.body-container > .intro-container > .button-container > .projects-button:hover > .projects {
+    color: #FFFFFF;
 }
 .body-container > .intro-container > .button-container > .youtube-button {
     width: 8em;
@@ -144,6 +159,12 @@ html, body {
     border: 2px solid #f42735;
     background-color: #f42735;
     margin-left: 2em;
+    transition: .3s;
+}
+.body-container > .intro-container > .button-container > .youtube-button:hover {
+    cursor: pointer;
+    border: 2px solid #cf2430;
+    background-color: #cf2430;
 }
 .body-container > .intro-container > .button-container > .youtube-button > .material-icons {
     font-size: 3rem;
