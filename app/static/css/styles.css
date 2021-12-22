@@ -27,7 +27,13 @@ html, body {
     font-family: PoppinsBold, serif;
     font-size: 1.5rem;
     color: #f42735;
+    text-decoration: none;
     margin-left: 3em;
+    transition: .3s;
+}
+.nav-menu > .label-container > .label:hover {
+    cursor: pointer;
+    color: #d1212d;
 }
 .nav-menu > .menu-container {
     display: flex;
@@ -114,9 +120,26 @@ html, body {
     animation-fill-mode: forwards;
     margin-top: 0.1em;
 }
+.body-container > .intro-container > .social-media-container {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 2em;
+    position: relative;
+    animation: from-bottom-to-top;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.body-container > .intro-container > .social-media-container > img {
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+.body-container > .intro-container > .social-media-container > img:nth-child(n+2) {
+    margin-left: 2.5em;
+}
 .body-container > .intro-container > .button-container {
     display: flex;
-    margin-top: 5em;
+    margin-top: 3.5em;
     position: relative;
     animation: from-bottom-to-top;
     animation-duration: 1s;
