@@ -281,7 +281,8 @@ html, body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-color: #4361ee;
+    align-items: center;
+    background-color: #0d0e0e;
 }
 .tech-skills-container {
     margin-left: 5em;
@@ -324,13 +325,19 @@ html, body {
     margin-left: 2em;
 }
 .tech-stack-container > .tech-stack {
-    font-family: PoppinsRegular, serif;
+    font-family: PoppinsBold, serif;
     font-size: 0.9rem;
     color: #FFF;
     margin: 0.8em;
     padding: 0.5em 1.5em 0.5em 1.5em;
-    border-radius: 5em;
-    background-color: #16181a;
+    border-radius: 0.2em;
+    text-decoration: none;
+    transition: .3s;
+    background-color: #ce3232;
+}
+.tech-stack-container > .tech-stack:hover {
+    cursor: pointer;
+    background-color: #f12e2e;
 }
 @keyframes from-top-to-bottom {
   0% {top: -30px}
