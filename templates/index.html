@@ -102,5 +102,24 @@
             </div>
         </div>
     </div>
+    <div class="technical-skills-container">
+        <div class="tech-skills-container">
+            <p class="tech-skills-label">Technical Skills</p>
+            {% for skill in skills %}
+                <div class="tech-skills-list-container">
+                    <p class="tech-platforms-label">{{ skill.platform }}</p>
+                    <div class="divider-container">
+                        <div class="divider"></div>
+                        <div class="divider-dot"></div>
+                    </div>
+                    <div class="tech-stack-container">
+                        {% for domain in skill.domains %}
+                            <p class="tech-stack">{{ domain }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 </body>
 </html>

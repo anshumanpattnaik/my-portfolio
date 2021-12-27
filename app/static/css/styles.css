@@ -277,6 +277,61 @@ html, body {
     color: #f42735;
     background: #FFFFFF;
 }
+.technical-skills-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: #4361ee;
+}
+.tech-skills-container {
+    margin-left: 5em;
+}
+.tech-skills-label {
+    font-family: PoppinsBold, serif;
+    font-size: 3rem;
+    color: #FFF;
+}
+.tech-skills-list-container {
+    display: grid;
+    grid-template-columns: 20em 5em auto;
+    align-items: center;
+}
+.tech-platforms-label {
+    font-family: PoppinsBold, serif;
+    font-size: 1.2rem;
+    color: #FFF;
+}
+.tech-skills-list-container > .divider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3em;
+}
+.tech-skills-list-container > .divider-container > .divider {
+    width: 2.5px;
+    height: 4em;
+    background-color: #FFFFFF;
+}
+.tech-skills-list-container > .divider-container > .divider-dot {
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 5em;
+    background-color: #FFF;
+}
+.tech-stack-container {
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+}
+.tech-stack-container > .tech-stack {
+    font-family: PoppinsRegular, serif;
+    font-size: 0.9rem;
+    color: #FFF;
+    margin: 0.8em;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    border-radius: 5em;
+    background-color: #16181a;
+}
 @keyframes from-top-to-bottom {
   0% {top: -30px}
   100% {top: 0}
