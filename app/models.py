@@ -26,7 +26,7 @@ class Project(models.Model):
     description = models.TextField(blank=True)
     github_link = models.CharField(max_length=100, blank=True)
     youtube_link = models.CharField(max_length=100, blank=True)
-    web_link = models.CharField(max_length=100, blank=True)
+    project_link = models.CharField(max_length=100, blank=True)
     tech_stack = ArrayField(models.CharField(max_length=100), blank=True)
     color_code = models.CharField(max_length=100, blank=True)
     published_date = models.DateTimeField(auto_now_add=True)
