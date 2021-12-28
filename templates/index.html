@@ -82,29 +82,31 @@
         </div>
     </div>
     <div class="about-me-container">
-        <div class="profile-container">
-            <img src="{% static 'images/anshuman_pattnaik.jpg' %}" alt="Anshuman Pattnaik" title="Anshuman Pattnaik"/>
-            <div class="about-me">
-                <span class="about-me-label">About Me</span>
-                <p class="description">
-                    I am a software developer with 8+ years of experience and worked on various core technology like
-                    (Android, Python, Django, Node.js, React.js/Redux and many more). Also interested in learning
-                    API Security & Web Security automation testing to find vulnerabilities in the system and follow
-                    the best coding practices to secure the platforms.
-                </p>
-                <p class="description">
-                    Also, I am the creator of the <a href="https://hackbotone.com" class="hackbotone" target="_blank">HackbotOne</a>
-                    website that produces contents from application security & software development.
-                </p>
-                <p class="view-profile">
-                    <button>VIEW PROFILE</button>
-                </p>
+        <div class="about-container">
+            <p class="sections-label">About Me</p>
+            <div class="profile-container">
+                <img src="{% static 'images/anshuman_pattnaik.jpg' %}" alt="Anshuman Pattnaik" title="Anshuman Pattnaik"/>
+                <div class="about-me">
+                    <p class="description">
+                        I am a software developer with 8+ years of experience and worked on various core technology like
+                        (Android, Python, Django, Node.js, React.js/Redux and many more). Also interested in learning
+                        API Security & Web Security automation testing to find vulnerabilities in the system and follow
+                        the best coding practices to secure the platforms.
+                    </p>
+                    <p class="description">
+                        Also, I am the creator of the <a href="https://hackbotone.com" class="hackbotone" target="_blank">HackbotOne</a>
+                        website that produces contents from application security & software development.
+                    </p>
+                    <p class="view-profile">
+                        <button>VIEW PROFILE</button>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
     <div class="technical-skills-container">
         <div class="tech-skills-container">
-            <p class="tech-skills-label">Technical Skills</p>
+            <p class="sections-label">Technical Skills</p>
             {% for skill in skills %}
                 <div class="tech-skills-list-container">
                     <p class="tech-platforms-label">{{ skill.platform }}</p>
@@ -119,6 +121,16 @@
                     </div>
                 </div>
             {% endfor %}
+        </div>
+    </div>
+    <div class="projects-root-container">
+        <div class="projects-container">
+            <p class="sections-label">Projects</p>
+            <div class="projects-list-container">
+                <div class="projects-item"></div>
+                <div class="projects-item"></div>
+                <div class="projects-item"></div>
+            </div>
         </div>
     </div>
 </body>

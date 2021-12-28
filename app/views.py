@@ -1,10 +1,10 @@
 from django.shortcuts import render
 
-from app.models import TechPlatforms, TechStack
+from app.models import TechPlatform, TechStack
 
 
 def index(request):
-    tech_platforms = TechPlatforms.objects.all()
+    tech_platforms = TechPlatform.objects.all()
     tech_skills = []
     for _index, platform in enumerate(tech_platforms, start=1):
         tech_stack = TechStack.objects.filter(domain_id=_index)

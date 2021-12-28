@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import TechPlatforms, TechStack
+from .models import TechPlatform, TechStack, Project
 
-admin.site.register(TechPlatforms)
+admin.site.register(TechPlatform)
 admin.site.register(TechStack)
+admin.site.register(Project)

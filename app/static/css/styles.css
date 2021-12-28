@@ -218,17 +218,24 @@ html, body {
         -ms-user-select: none;
             user-select: none;
 }
+.sections-label {
+    font-family: PoppinsBold, serif;
+    font-size: 3rem;
+    color: #FFF;
+}
 .about-me-container {
     width: 100vw;
     height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     background-color: #c20020;
+}
+.about-container {
+    margin-left: 5em;
 }
 .profile-container {
     width: 80vw;
     display: flex;
-    margin-left: 5em;
 }
 .profile-container > img {
     width: 20em;
@@ -287,11 +294,6 @@ html, body {
 .tech-skills-container {
     margin-left: 5em;
 }
-.tech-skills-label {
-    font-family: PoppinsBold, serif;
-    font-size: 3rem;
-    color: #FFF;
-}
 .tech-skills-list-container {
     display: grid;
     grid-template-columns: 20em 5em auto;
@@ -338,6 +340,28 @@ html, body {
 .tech-stack-container > .tech-stack:hover {
     cursor: pointer;
     background-color: #f12e2e;
+}
+.projects-root-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #4361ee;
+}
+.projects-container {
+    margin-left: 5em;
+}
+.projects-list-container {
+    display: flex;
+    align-items: center;
+}
+.projects-item {
+    width: 35em;
+    height: 40em;
+    background-color: #0d0e0e;
+}
+.projects-item:nth-child(2) {
+    margin: 2em;
 }
 @keyframes from-top-to-bottom {
   0% {top: -30px}
