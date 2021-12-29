@@ -1,9 +1,11 @@
 from django.shortcuts import render
 
-from app.models import TechPlatform, TechStack
+from app.models import TechPlatform, TechStack, Project
 
 
 def index(request):
+
+    # Technical Skills
     tech_platforms = TechPlatform.objects.all()
     tech_skills = []
     for _index, platform in enumerate(tech_platforms, start=1):
@@ -13,7 +15,11 @@ def index(request):
             "tech_stack": tech_stack
         }
         tech_skills.append(result)
+
+    # Projects
+    projects = Project.objects.all()
     context = {
-        "skills": tech_skills
+        "skills": tech_skills,
+        "projects": projects
     }
     return render(request, 'index.html', context)

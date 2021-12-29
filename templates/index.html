@@ -125,11 +125,23 @@
     </div>
     <div class="projects-root-container">
         <div class="projects-container">
-            <p class="sections-label">Projects</p>
+            <p class="projects-label">Projects</p>
             <div class="projects-list-container">
-                <div class="projects-item"></div>
-                <div class="projects-item"></div>
-                <div class="projects-item"></div>
+                {% for project in projects|slice:":3" %}
+                    <div class="projects-item" style="background-color: {{ project.color_code }}">
+                        <div class="projects-title-container">
+                            <span class="title">{{ project.title }}</span>
+                        </div>
+                        <div class="projects-thumbnail-container">
+                            <img src="{{ project.thumbnail }}" class="thumbnail" alt="{{ project.title }}" title="{{ project.title }}"/>
+                        </div>
+                        <div class="projects-tech-stack-container">
+                            {% for tech_stack in project.tech_stack %}
+                                <span class="tech-stack-label">{{ tech_stack }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>

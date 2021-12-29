@@ -225,7 +225,7 @@ html, body {
 }
 .about-me-container {
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     background-color: #c20020;
@@ -346,10 +346,15 @@ html, body {
     height: 100vh;
     display: flex;
     align-items: center;
-    background-color: #4361ee;
+    background-color: #edf2f4;
 }
 .projects-container {
     margin-left: 5em;
+}
+.projects-label {
+    font-family: PoppinsBold, serif;
+    font-size: 3rem;
+    color: #000;
 }
 .projects-list-container {
     display: flex;
@@ -358,10 +363,40 @@ html, body {
 .projects-item {
     width: 35em;
     height: 40em;
-    background-color: #0d0e0e;
 }
 .projects-item:nth-child(2) {
     margin: 2em;
+}
+.projects-title-container {
+    height: 5em;
+    display: flex;
+    margin: 1.8em;
+}
+.projects-title-container > .title {
+    font-family: PoppinsBold, serif;
+    font-size: 2.2rem;
+    color: #FFF;
+}
+.projects-thumbnail-container {
+    height: 25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.projects-thumbnail-container > .thumbnail {
+    width: 90%;
+    display: block;
+}
+.projects-tech-stack-container {
+    height: 3em;
+    display: flex;
+    align-items: center;
+}
+.projects-tech-stack-container > .tech-stack-label {
+    font-family: PoppinsRegular, serif;
+    font-size: 1rem;
+    color: #FFF;
+    margin-left: 2em;
 }
 @keyframes from-top-to-bottom {
   0% {top: -30px}
