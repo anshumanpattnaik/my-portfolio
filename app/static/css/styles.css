@@ -343,13 +343,13 @@ html, body {
 }
 .projects-root-container {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     background-color: #edf2f4;
 }
 .projects-container {
-    margin-left: 5em;
+    /*margin-left: 5em;*/
 }
 .projects-label {
     font-family: PoppinsBold, serif;
@@ -357,15 +357,26 @@ html, body {
     color: #000;
 }
 .projects-list-container {
-    display: flex;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
     align-items: center;
+    margin-top: 10em;
 }
 .projects-item {
-    width: 35em;
+    width: 32em;
     height: 40em;
+    cursor: pointer;
+    transition: transform 500ms;
+    will-change: transform;
+    margin: 1em;
 }
-.projects-item:nth-child(2) {
-    margin: 2em;
+/*.projects-item:nth-child(2) {*/
+/*    margin: 2em;*/
+/*}*/
+.projects-item:hover, .projects-item:focus {
+    transform: translateY(-20px);
 }
 .projects-title-container {
     height: 5em;
@@ -374,7 +385,7 @@ html, body {
 }
 .projects-title-container > .title {
     font-family: PoppinsBold, serif;
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #FFF;
 }
 .projects-thumbnail-container {
@@ -388,7 +399,6 @@ html, body {
     display: block;
 }
 .projects-tech-stack-container {
-    height: 3em;
     display: flex;
     align-items: center;
 }
@@ -397,6 +407,26 @@ html, body {
     font-size: 1rem;
     color: #FFF;
     margin-left: 2em;
+}
+.view-all-projects-btn {
+    width: 12em;
+    height: 3.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2em;
+    text-decoration: none;
+    transition: .3s;
+    background-color: #f42735;
+}
+.view-all-projects-btn > span {
+    font-family: PoppinsBold, serif;
+    font-size: 0.85rem;
+    color: #FFF;
+}
+.view-all-projects-btn:hover {
+    cursor: pointer;
+    background-color: #c20020;
 }
 @keyframes from-top-to-bottom {
   0% {top: -30px}

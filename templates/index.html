@@ -36,19 +36,7 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <div class="nav-menu">
-        <div class="label-container">
-            <a class="label">My Portfolio.</a>
-        </div>
-        <div class="menu-container">
-            <a href="#">Home</a>
-            <a href="#">Technical Skills</a>
-            <a href="#">Projects</a>
-            <a href="#">Blogs</a>
-            <a href="#">About Me</a>
-            <a href="#">Contacts</a>
-        </div>
-    </div>
+    {{ dom|safe }}
     <div class="body-container">
         <span class="x-label">><</span>
         <div class="intro-container">
@@ -133,7 +121,7 @@
                             <span class="title">{{ project.title }}</span>
                         </div>
                         <div class="projects-thumbnail-container">
-                            <img src="{{ project.thumbnail }}" class="thumbnail" alt="{{ project.title }}" title="{{ project.title }}"/>
+                            <img src="{{ project.thumbnail }}" class="thumbnail" alt=""/>
                         </div>
                         <div class="projects-tech-stack-container">
                             {% for tech_stack in project.tech_stack %}
@@ -143,6 +131,9 @@
                     </div>
                 {% endfor %}
             </div>
+            <a href="/projects" class="view-all-projects-btn">
+                <span>VIEW ALL PROJECTS</span>
+            </a>
         </div>
     </div>
 </body>

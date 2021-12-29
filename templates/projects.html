@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>My Portfolio|Projects</title>
+    <meta name="keywords" content="{{seo_keywords|safe}}">
+    <meta name="author" content="{{author}}">
+    <meta name="description" property="og:description" content="{{description}}">
+
+    <!-- Twitter Card data -->
+{#    <meta name="twitter:card" content="summary_large_image">#}
+{#    <meta name="twitter:site" content="{{twitter_username}}">#}
+{#    <meta name="twitter:title" content="{{title}}">#}
+{#    <meta name="twitter:description" content="{{description}}">#}
+{#    <meta name="twitter:creator" content="{{twitter_username}}">#}
+{#    <meta name="twitter:image" content="{{seo_thumbnail}}">#}
+
+    <!-- Open Graph data -->
+{#    <meta property="og:locale" content="en_US" />#}
+{#    <meta property="og:type" content="article" />#}
+{#    <meta property="og:title" content="{{title}}" />#}
+{#    <meta property="og:description" content="{{description}}" />#}
+{#    <meta property="og:url" content="{{site_url}}" />#}
+{#    <meta property="og:site_name" content="{{site_name}}" />#}
+{#    <meta property="article:publisher" content="{{article_publisher}}" />#}
+{#    <meta property="article:author" content="{{article_author}}" />#}
+{#    <meta property="fb:app_id" content="{{fb_id}}" />#}
+{#    <meta property="og:image" content="{{seo_thumbnail}}" />#}
+{#    <meta property="og:image:secure_url" content="{{seo_thumbnail}}" />#}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Portfolio</title>
+</head>
+<body style="background-color: white;">
+    {{ dom|safe }}
+    <div class="projects-root-container">
+        <div class="projects-container">
+            <div class="projects-list-container">
+                {% for project in projects %}
+                    <div class="projects-item" style="background-color: {{ project.color_code }}">
+                        <div class="projects-title-container">
+                            <span class="title">{{ project.title }}</span>
+                        </div>
+                        <div class="projects-thumbnail-container">
+                            <img src="{{ project.thumbnail }}" class="thumbnail" alt=""/>
+                        </div>
+                        <div class="projects-tech-stack-container">
+                            {% for tech_stack in project.tech_stack %}
+                                <span class="tech-stack-label">{{ tech_stack }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
