@@ -6,135 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <title>My Portfolio</title>
-    <meta name="keywords" content="{{seo_keywords|safe}}">
-    <meta name="author" content="{{author}}">
-    <meta name="description" property="og:description" content="{{description}}">
-
-    <!-- Twitter Card data -->
-{#    <meta name="twitter:card" content="summary_large_image">#}
-{#    <meta name="twitter:site" content="{{twitter_username}}">#}
-{#    <meta name="twitter:title" content="{{title}}">#}
-{#    <meta name="twitter:description" content="{{description}}">#}
-{#    <meta name="twitter:creator" content="{{twitter_username}}">#}
-{#    <meta name="twitter:image" content="{{seo_thumbnail}}">#}
-
-    <!-- Open Graph data -->
-{#    <meta property="og:locale" content="en_US" />#}
-{#    <meta property="og:type" content="article" />#}
-{#    <meta property="og:title" content="{{title}}" />#}
-{#    <meta property="og:description" content="{{description}}" />#}
-{#    <meta property="og:url" content="{{site_url}}" />#}
-{#    <meta property="og:site_name" content="{{site_name}}" />#}
-{#    <meta property="article:publisher" content="{{article_publisher}}" />#}
-{#    <meta property="article:author" content="{{article_author}}" />#}
-{#    <meta property="fb:app_id" content="{{fb_id}}" />#}
-{#    <meta property="og:image" content="{{seo_thumbnail}}" />#}
-{#    <meta property="og:image:secure_url" content="{{seo_thumbnail}}" />#}
-
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <title>Portfolio</title>
 </head>
 <body>
-    {{ dom|safe }}
-    <div class="body-container">
-        <span class="x-label">><</span>
-        <div class="intro-container">
-            <span class="hello">Hello,</span>
-            <span class="i-am">I'm <span class="name">Anshuman Pattnaik</span></span>
-            <span class="software-developer">Software Developer</span>
-            <div class="social-media-container">
-                <img src="{% static 'images/github.png' %}" alt="GitHub" title="GitHub"
-                     onclick="window.open('https://github.com/anshumanpattnaik/', '_blank')"/>
-                <img src="{% static 'images/facebook.png' %}" alt="Facebook" title="Facebook"
-                     onclick="window.open('https://www.facebook.com/Hackbot0ne/', '_blank')"/>
-                <img src="{% static 'images/twitter.png' %}" alt="Twitter" title="Twitter"
-                     onclick="window.open('https://twitter.com/anspattnaik', '_blank')"/>
-                <img src="{% static 'images/linkedin.png' %}" alt="Linkedin" title="Linkedin"
-                     onclick="window.open('https://www.linkedin.com/in/anshuman123/', '_blank')"/>
-                <img src="{% static 'images/instagram.png' %}" alt="Instagram" title="Instagram"
-                     onclick="window.open('https://www.instagram.com/anshuman.pattnaik', '_blank')"/>
-            </div>
-            <div class="button-container">
-                <div class="projects-button">
-                    <span class="projects">Projects</span>
-                    <img src="{% static 'images/red-right-arrow.png' %}" class="right-arrow" alt=""/>
-                </div>
-                <div class="youtube-button">
-                    <span class="material-icons">play_arrow</span>
-                </div>
-            </div>
+    <header>
+        <h1 class="logo">My Portfolio</h1>
+        <div class="desktop-nav-container">
+            {{ nav_menu|safe }}
         </div>
-        <div class="developer-container">
-            <span class="developer">developer</span>
+        <div class="mobile-nav-container">
+            {{ nav_menu|safe }}
         </div>
-    </div>
-    <div class="about-me-container">
-        <div class="about-container">
-            <p class="sections-label">About Me</p>
-            <div class="profile-container">
-                <img src="{% static 'images/anshuman_pattnaik.jpg' %}" alt="Anshuman Pattnaik" title="Anshuman Pattnaik"/>
-                <div class="about-me">
-                    <p class="description">
-                        I am a software developer with 8+ years of experience and worked on various core technology like
-                        (Android, Python, Django, Node.js, React.js/Redux and many more). Also interested in learning
-                        API Security & Web Security automation testing to find vulnerabilities in the system and follow
-                        the best coding practices to secure the platforms.
-                    </p>
-                    <p class="description">
-                        Also, I am the creator of the <a href="https://hackbotone.com" class="hackbotone" target="_blank">HackbotOne</a>
-                        website that produces contents from application security & software development.
-                    </p>
-                    <p class="view-profile">
-                        <button>VIEW PROFILE</button>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="technical-skills-container">
-        <div class="tech-skills-container">
-            <p class="sections-label">Technical Skills</p>
-            {% for skill in skills %}
-                <div class="tech-skills-list-container">
-                    <p class="tech-platforms-label">{{ skill.platform }}</p>
-                    <div class="divider-container">
-                        <div class="divider"></div>
-                        <div class="divider-dot"></div>
-                    </div>
-                    <div class="tech-stack-container">
-                        {% for tech_stack in skill.tech_stack %}
-                            <a href="{{ tech_stack.domain_url }}" class="tech-stack" target="_blank">{{ tech_stack.domain }}</a>
-                        {% endfor %}
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="projects-root-container">
-        <div class="projects-container">
-            <p class="projects-label">Projects</p>
-            <div class="projects-list-container">
-                {% for project in projects|slice:":3" %}
-                    <div class="projects-item" style="background-color: {{ project.color_code }}">
-                        <div class="projects-title-container">
-                            <span class="title">{{ project.title }}</span>
-                        </div>
-                        <div class="projects-thumbnail-container">
-                            <img src="{{ project.thumbnail }}" class="thumbnail" alt=""/>
-                        </div>
-                        <div class="projects-tech-stack-container">
-                            {% for tech_stack in project.tech_stack %}
-                                <span class="tech-stack-label">{{ tech_stack }}</span>
-                            {% endfor %}
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-            <a href="/projects" class="view-all-projects-btn">
-                <span>VIEW ALL PROJECTS</span>
-            </a>
-        </div>
-    </div>
+    </header>
+    <section class="intro-section">
+        <span class="x-marker">><</span>
+    </section>
 </body>
 </html>
