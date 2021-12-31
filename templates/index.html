@@ -22,8 +22,8 @@
     <section class="introduction">
         <div class="text-container">
             <span class="hello">Hello,</span>
-            <span class="i-am">I'm <span class="name">Anshuman Pattnaik</span></span>
-            <span class="designation">Software Developer</span>
+            <span class="i-am">I'm <span class="name">{{ profile.full_name }}</span></span>
+            <span class="designation">{{ profile.designation }}</span>
             <div class="red-divider"></div>
         </div>
         <div class="social-media-container">
@@ -55,6 +55,12 @@
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="technical-skills">
+        <div class="container">
+            <label>Technical Skills</label>
+            <div class="red-divider"></div>
         </div>
     </section>
 </body>

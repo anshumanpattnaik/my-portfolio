@@ -109,9 +109,14 @@ header {
     font-size: 2vw;
     color: #FFFFFF;
 }
+label {
+    font-family: BebasNeueRegular, serif;
+    font-size: 3vw;
+    color: #FFFFFF;
+}
 .red-divider {
-    width: 3vw;
-    height: 0.3em;
+    width: 2vw;
+    height: 0.2em;
     margin-top: 0.5em;
     background-color: var(--red);
 }
@@ -176,11 +181,6 @@ header {
     display: flex;
     flex-direction: column;
 }
-.about-me > .container > label {
-    font-family: BebasNeueRegular, serif;
-    font-size: 3vw;
-    color: #FFFFFF;
-}
 .about-me > .container > .profile {
     display: flex;
     margin-top: 5em;
@@ -231,6 +231,20 @@ header {
     cursor: pointer;
     color: var(--red);
     background: #FFFFFF;
+}
+.technical-skills {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    background-color: #2a3035;
+}
+.technical-skills > .container {
+    margin-left: 5em;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
 }
 @media only screen and (max-width: 950px) {
     header {
@@ -299,6 +313,9 @@ header {
         font-size: 7vw;
         margin-top: 0.3em;
     }
+    label {
+        font-size: 13vw;
+    }
     .red-divider {
         width: 10vw;
         height: 0.2em;
@@ -336,9 +353,6 @@ header {
         align-items: center;
         margin-left: 0;
         margin-top: 3em;
-    }
-    .about-me > .container > label {
-        font-size: 13vw;
     }
     .about-me > .container > .profile {
         flex-direction: column;
