@@ -164,9 +164,10 @@ header {
 }
 .about-me {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
+    padding-bottom: 5vh;
     background-color: var(--dark-color);
 }
 .about-me > .container {
@@ -193,8 +194,8 @@ header {
 }
 .about-me > .container > .profile > .description {
     width: 60vw;
-    margin-left: 5em;
-    /*background-color: #f42735;*/
+    margin-left: 4vw;
+    margin-top: 0;
 }
 .about-me > .container > .profile > .description > .text-content {
     font-family: PoppinsRegular, serif;
@@ -212,11 +213,14 @@ header {
     cursor: pointer;
     text-decoration: underline;
 }
+.about-me > .container > .profile > .description > .view-profile {
+    margin-top: 3em;
+}
 .about-me > .container > .profile > .description > .view-profile > button {
-    width: 15em;
-    height: 4em;
+    width: 12vw;
+    height: 3.5vw;
     font-family: PoppinsBold, serif;
-    font-size: 1rem;
+    font-size: 0.8vw;
     color: #FFFFFF;
     margin-top: 2em;
     transition: .3s;
@@ -241,7 +245,7 @@ header {
     }
     .mobile-nav-container {
         width: 100vw;
-        display: grid;
+        display: none;
         grid-template-columns: auto auto auto auto auto auto;
         align-items: center;
         position: fixed;
@@ -324,5 +328,56 @@ header {
         height: 6vh;
         font-size: 3vw;
         border-radius: 0.1em;
+    }
+    .about-me {
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5vh;
+        background-color: var(--dark-color);
+    }
+    .about-me > .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 3em;
+    }
+    .about-me > .container > label {
+        font-size: 13vw;
+    }
+    .about-me > .container > .profile {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2em;
+    }
+    .about-me > .container > .profile > .photo {
+        width: 50vw;
+        height: 50vw;
+    }
+    .about-me > .container > .profile > .description {
+        width: 90vw;
+        margin-left: 0;
+        margin-top: 2em;
+    }
+    .about-me > .container > .profile > .description > .text-content {
+        font-size: 3.5vw;
+        line-height: 2.2em;
+    }
+    .about-me > .container > .profile > .description > .text-content > a {
+        font-size: 3.5vw;
+    }
+    .about-me > .container > .profile > .description > .view-profile {
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5em;
+    }
+    .about-me > .container > .profile > .description > .view-profile > button {
+        width: 60vw;
+        height: 15vw;
+        font-size: 3vw;
+        margin-top: 2em;
+        border: 1.5px solid #FFFFFF;
     }
 }
