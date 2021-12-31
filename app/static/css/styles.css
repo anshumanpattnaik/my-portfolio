@@ -74,11 +74,76 @@ header {
     cursor: pointer;
     color: #cf2430;
 }
-.intro-section {
+.introduction {
     width: 100vw;
     height: 100vh;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    margin-left: 4em;
+}
+.introduction > .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*background-color: aqua;*/
+}
+.introduction > .text-container > .hello {
+    font-family: BebasNeueRegular, serif;
+    font-size: 3rem;
+    color: #FFFFFF;
+}
+.introduction > .text-container > .i-am {
+    font-family: BebasNeueRegular, serif;
+    font-size: 8rem;
+    color: #FFF;
+}
+.introduction > .text-container > .i-am > .name {
+    font-family: BebasNeueRegular, serif;
+    font-size: 8rem;
+    color: #f42735;
+}
+.introduction > .text-container > .designation {
+    font-family: BebasNeueRegular, serif;
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+.introduction > .text-container > .red-divider {
+    width: 3em;
+    height: 0.3em;
+    margin-top: 0.5em;
+    background-color: #f42735;
+}
+.introduction > .social-media-container {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1.5em;
+}
+.introduction > .social-media-container > img {
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+.introduction > .social-media-container > img:nth-child(n+2) {
+    margin-left: 2.5em;
+}
+.introduction > .button-container {
+    width: 40vw;
+    /*height: 5em;*/
+    display: flex;
+    margin-top: 3em;
+    /*background-color: aquamarine;*/
+}
+.introduction > .button-container > .projects {
+    width: 13em;
+    height: 3.5em;
+    font-family: PoppinsBold, serif;
+    font-size: 1rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.2em;
+    background-color: #f42735;
 }
 .intro-section > .x-marker {
     font-family: PoppinsBold, serif;
