@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -40,6 +40,33 @@
         </div>
         <div class="button-container">
             <button class="projects">Projects</button>
+        </div>
+    </section>
+    <section class="about-me">
+        <div class="container">
+            <label>About Me</label>
+            <div class="red-divider"></div>
+            <div class="profile">
+                <img src="{% static 'images/anshuman_pattnaik.jpg' %}" class="photo" alt="Anshuman Pattnaik" title="Anshuman Pattnaik">
+                <div class="description">
+                    <span class="text-content">
+                        I am a software developer with 8+ years of experience and worked on various core technology like
+                        (Android, Python, Django, Node.js, React.js/Redux and many more). Also interested in learning
+                        API Security & Web Security automation testing to find vulnerabilities in the system and follow
+                        the best coding practices securing the platforms. I have started pursuing my interest in
+                        application security after having a strong background in software development to know more about
+                        security vulnerabilities and exploitation techniques. And also as a developer, my focus will be on
+                        building security automation tools to detect & identify vulnerabilities in a system.
+                    </span>
+                    <p class="text-content">
+                        Also, I am the creator of the <a href="https://hackbotone.com" class="hackbotone" target="_blank">HackbotOne</a>
+                        website that produces contents from application security & software development.
+                    </p>
+                    <p class="view-profile">
+                        <button>VIEW PROFILE</button>
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 </body>

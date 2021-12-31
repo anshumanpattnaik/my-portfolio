@@ -16,7 +16,9 @@
 }
 :root {
     --dark-color: #16181a;
-    --background: #0d0e0e;
+    --red: #f42735;
+    --light-red: #af0614;
+    --background: #1a1b1d;
 }
 html, body {
     margin: 0;
@@ -34,12 +36,12 @@ header {
     position: fixed;
     z-index: 9999;
     border-bottom: 0.5px solid var(--dark-color);
-    background: var(--background);
+    background: var(--dark-color);
 }
 .logo {
     font-family: BebasNeueRegular, serif;
-    font-size: 1.8rem;
-    color: #f42735;
+    font-size: 1.5vw;
+    color: var(--red);
     margin-left: 2em;
 }
 .desktop-nav-container {
@@ -50,7 +52,6 @@ header {
 .desktop-nav-container nav {
     position: absolute;
     right: 0;
-    background: var(--background);
 }
 .desktop-nav-container nav ul {
     display: flex;
@@ -64,7 +65,7 @@ header {
 }
 .desktop-nav-container nav a {
     font-family: BebasNeueRegular, serif;
-    font-size: 1.2rem;
+    font-size: 1vw;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -72,7 +73,7 @@ header {
 }
 .desktop-nav-container nav a:hover {
     cursor: pointer;
-    color: #cf2430;
+    color: var(--red);
 }
 .introduction {
     width: 100vw;
@@ -90,29 +91,29 @@ header {
 }
 .introduction > .text-container > .hello {
     font-family: BebasNeueRegular, serif;
-    font-size: 3rem;
+    font-size: 2.5vw;
     color: #FFFFFF;
 }
 .introduction > .text-container > .i-am {
     font-family: BebasNeueRegular, serif;
-    font-size: 8rem;
+    font-size: 7vw;
     color: #FFF;
 }
 .introduction > .text-container > .i-am > .name {
     font-family: BebasNeueRegular, serif;
-    font-size: 8rem;
-    color: #f42735;
+    font-size: 7vw;
+    color: var(--red);
 }
 .introduction > .text-container > .designation {
     font-family: BebasNeueRegular, serif;
-    font-size: 2rem;
+    font-size: 2vw;
     color: #FFFFFF;
 }
-.introduction > .text-container > .red-divider {
-    width: 3em;
+.red-divider {
+    width: 3vw;
     height: 0.3em;
     margin-top: 0.5em;
-    background-color: #f42735;
+    background-color: var(--red);
 }
 .introduction > .social-media-container {
     display: flex;
@@ -120,8 +121,7 @@ header {
     margin-top: 1.5em;
 }
 .introduction > .social-media-container > img {
-    width: 2em;
-    height: 2em;
+    width: 1.5vw;
     cursor: pointer;
 }
 .introduction > .social-media-container > img:nth-child(n+2) {
@@ -135,15 +135,20 @@ header {
     /*background-color: aquamarine;*/
 }
 .introduction > .button-container > .projects {
-    width: 13em;
-    height: 3.5em;
+    width: 12vw;
+    height: 6vh;
     font-family: PoppinsBold, serif;
-    font-size: 1rem;
+    font-size: 0.75vw;
     color: #FFFFFF;
     text-transform: uppercase;
     border: none;
-    border-radius: 0.2em;
-    background-color: #f42735;
+    border-radius: 0.1em;
+    transition: .3s;
+    background-color: var(--red);
+}
+.introduction > .button-container > .projects:hover {
+    cursor: pointer;
+    background-color: var(--light-red);
 }
 .intro-section > .x-marker {
     font-family: PoppinsBold, serif;
@@ -157,11 +162,78 @@ header {
         -ms-user-select: none;
             user-select: none;
 }
+.about-me {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-color);
+}
+.about-me > .container {
+    margin-left: 5em;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+}
+.about-me > .container > label {
+    font-family: BebasNeueRegular, serif;
+    font-size: 3vw;
+    color: #FFFFFF;
+}
+.about-me > .container > .profile {
+    display: flex;
+    margin-top: 5em;
+}
+.about-me > .container > .profile > .photo {
+    width: 15vw;
+    height: 15vw;
+    filter: grayscale(100%);
+    border-radius: 0.2em;
+    margin-top: 0.8em;
+}
+.about-me > .container > .profile > .description {
+    width: 60vw;
+    margin-left: 5em;
+    /*background-color: #f42735;*/
+}
+.about-me > .container > .profile > .description > .text-content {
+    font-family: PoppinsRegular, serif;
+    font-size: 1vw;
+    color: #FFFFFF;
+    line-height: 2.5em;
+}
+.about-me > .container > .profile > .description > .text-content > a {
+    font-family: PoppinsRegular, serif;
+    font-size: 1vw;
+    color: var(--red);
+    text-decoration: none;
+}
+.about-me > .container > .profile > .description > .text-content > a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.about-me > .container > .profile > .description > .view-profile > button {
+    width: 15em;
+    height: 4em;
+    font-family: PoppinsBold, serif;
+    font-size: 1rem;
+    color: #FFFFFF;
+    margin-top: 2em;
+    transition: .3s;
+    border: 2.2px solid #FFFFFF;
+    background: transparent;
+}
+.about-me > .container > .profile > .description > .view-profile > button:hover {
+    cursor: pointer;
+    color: var(--red);
+    background: #FFFFFF;
+}
 @media only screen and (max-width: 950px) {
     header {
         height: 4em;
     }
     .logo {
+        font-size: 5vw;
         margin-left: 1em;
     }
     .desktop-nav-container {
@@ -203,11 +275,54 @@ header {
         cursor: pointer;
         color: #cf2430;
     }
-    .intro-section > .x-marker {
-        font-size: 20rem;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
+    .introduction {
+        align-items: center;
+        margin-left: 0;
+    }
+    .introduction > .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .introduction > .text-container > .hello {
+        font-size: 10vw;
+    }
+    .introduction > .text-container > .i-am {
+        font-size: 12vw;
+        margin-top: 0.2em;
+    }
+    .introduction > .text-container > .i-am > .name {
+        font-size: 12vw;
+        margin-top: 0.2em;
+    }
+    .introduction > .text-container > .designation {
+        font-size: 7vw;
+        margin-top: 0.3em;
+    }
+    .red-divider {
+        width: 10vw;
+        height: 0.2em;
+        margin-top: 1em;
+    }
+    .introduction > .social-media-container {
+        margin-top: 3em;
+    }
+    .introduction > .social-media-container > img {
+        width: 7vw;
+    }
+    .introduction > .social-media-container > img:nth-child(n+2) {
+        margin-left: 2.5em;
+    }
+    .introduction > .button-container {
+        width: 100vw;
+        justify-content: center;
+        margin-top: 3em;
+    }
+    .introduction > .button-container > .projects {
+        width: 50vw;
+        height: 6vh;
+        font-size: 3vw;
+        border-radius: 0.1em;
     }
 }
