@@ -36,3 +36,16 @@ class Project(models.Model):
         managed = True
         db_table = 'projects'
         ordering = ['-published_date']
+
+
+class Profile(models.Model):
+    full_name = models.CharField(max_length=100)
+    photo = models.CharField(max_length=100)
+    designation = models.CharField(max_length=100)
+    about_me = models.TextField()
+    published_date = models.DateTimeField(auto_now_add=True)
+    last_updated_date = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        managed = True
+        db_table = 'profile'

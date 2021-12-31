@@ -15,10 +15,10 @@ def index(request):
                 "tech_stack": tech_stack
             }
             tech_skills.append(result)
-        # Projects
         context = {
             "skills": tech_skills,
             "projects": db_client.fetch_projects(),
+            "profile": db_client.fetch_profile()[0],
             "nav_menu": Constants.NAV_MENU
         }
         return render(request, 'index.html', context)

@@ -1,4 +1,4 @@
-from app.models import TechPlatform, TechStack, Project
+from app.models import TechPlatform, TechStack, Project, Profile
 
 
 class DBClient:
@@ -20,3 +20,7 @@ class DBClient:
     @staticmethod
     def fetch_projects():
         return Project.objects.all()
+
+    @staticmethod
+    def fetch_profile():
+        return Profile.objects.all()

@@ -268,16 +268,11 @@ header {
         margin: 1em;
     }
     .mobile-nav-container nav a {
-        font-family: BebasNeueRegular, serif;
         font-size: 0.8rem;
         color: white;
         text-decoration: none;
         text-transform: uppercase;
         transition: .3s;
-    }
-    .mobile-nav-container nav a:hover {
-        cursor: pointer;
-        color: #cf2430;
     }
     .introduction {
         align-items: center;
@@ -324,9 +319,9 @@ header {
         margin-top: 3em;
     }
     .introduction > .button-container > .projects {
-        width: 50vw;
-        height: 6vh;
-        font-size: 3vw;
+        width: 60vw;
+        height: 15vw;
+        font-size: 3.5vw;
         border-radius: 0.1em;
     }
     .about-me {
