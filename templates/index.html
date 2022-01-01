@@ -51,7 +51,7 @@
                 <div class="description">
                     {{ profile.about_me|safe }}
                     <p class="view-profile">
-                        <button>VIEW PROFILE</button>
+                        <button onclick="window.open('{{ profile.linkedin }}')">VIEW PROFILE</button>
                     </p>
                 </div>
             </div>
@@ -102,7 +102,7 @@
             {% endfor %}
         </div>
         <p class="view-projects">
-            <button>VIEW ALL PROJECTS</button>
+            <button onclick="window.open('/projects')">VIEW ALL PROJECTS</button>
         </p>
     </section>
     <section class="blogs">
@@ -114,13 +114,14 @@
             {% for blog in blogs %}
                 <div class="blogs-item">
                     <div class="thumbnail-container">
-                        <img src="{{ blog.thumbnail }}" class="thumbnail" alt=""/>
+                        <img src="{{ blog.thumbnail }}" class="thumbnail" alt=""
+                            onclick="window.open('{{ blog.link }}')"/>
                     </div>
                 </div>
             {% endfor %}
         </div>
         <p class="read-blogs">
-            <button>READ BLOGS</button>
+            <button onclick="window.open('https://hackbotone.com/blogs/page/1')">READ BLOGS</button>
         </p>
     </section>
     <section class="footer">

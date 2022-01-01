@@ -4,59 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-    <title>My Portfolio|Projects</title>
-    <meta name="keywords" content="{{seo_keywords|safe}}">
-    <meta name="author" content="{{author}}">
-    <meta name="description" property="og:description" content="{{description}}">
-
-    <!-- Twitter Card data -->
-{#    <meta name="twitter:card" content="summary_large_image">#}
-{#    <meta name="twitter:site" content="{{twitter_username}}">#}
-{#    <meta name="twitter:title" content="{{title}}">#}
-{#    <meta name="twitter:description" content="{{description}}">#}
-{#    <meta name="twitter:creator" content="{{twitter_username}}">#}
-{#    <meta name="twitter:image" content="{{seo_thumbnail}}">#}
-
-    <!-- Open Graph data -->
-{#    <meta property="og:locale" content="en_US" />#}
-{#    <meta property="og:type" content="article" />#}
-{#    <meta property="og:title" content="{{title}}" />#}
-{#    <meta property="og:description" content="{{description}}" />#}
-{#    <meta property="og:url" content="{{site_url}}" />#}
-{#    <meta property="og:site_name" content="{{site_name}}" />#}
-{#    <meta property="article:publisher" content="{{article_publisher}}" />#}
-{#    <meta property="article:author" content="{{article_author}}" />#}
-{#    <meta property="fb:app_id" content="{{fb_id}}" />#}
-{#    <meta property="og:image" content="{{seo_thumbnail}}" />#}
-{#    <meta property="og:image:secure_url" content="{{seo_thumbnail}}" />#}
-
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles1.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <title>Portfolio</title>
 </head>
-<body style="background-color: white;">
-    {{ dom|safe }}
-    <div class="projects-root-container">
-        <div class="projects-container">
-            <div class="projects-list-container">
-                {% for project in projects %}
-                    <div class="projects-item" style="background-color: {{ project.color_code }}">
-                        <div class="projects-title-container">
-                            <span class="title">{{ project.title }}</span>
-                        </div>
-                        <div class="projects-thumbnail-container">
-                            <img src="{{ project.thumbnail }}" class="thumbnail" alt=""/>
-                        </div>
-                        <div class="projects-tech-stack-container">
-                            {% for tech_stack in project.tech_stack %}
-                                <span class="tech-stack-label">{{ tech_stack }}</span>
-                            {% endfor %}
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
+<body>
+    <header>
+        <h1 class="logo">My Portfolio</h1>
+        <div class="desktop-nav-container">
+            {{ nav_menu|safe }}
         </div>
-    </div>
+    </header>
+    <div class="margin"></div>
+    <section class="projects">
+        <div class="container">
+            <label>Projects</label>
+            <div class="red-divider"></div>
+        </div>
+        <div class="list-container">
+            {% for project in projects %}
+                <div class="projects-item" style="background-color: {{ project.color_code }}">
+                    <div class="title-container">
+                        <span class="title">{{ project.title }}</span>
+                    </div>
+                    <div class="thumbnail-container">
+                        <img src="{{ project.thumbnail }}" class="thumbnail" alt=""/>
+                    </div>
+                    <div class="tech-stack-container">
+                        {% for tech_stack in project.tech_stack %}
+                            <span class="label">{{ tech_stack }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="footer">
+        <div class="container">
+            <span class="follow-me">Follow Me</span>
+            <div class="red-divider"></div>
+            <div class="social-media">
+                <img src="{% static 'images/github.png' %}" alt="GitHub" title="GitHub"
+                     onclick="window.open('{{ profile.github }}', '_blank')"/>
+                <img src="{% static 'images/facebook.png' %}" alt="Facebook" title="Facebook"
+                     onclick="window.open('{{ profile.facebook }}', '_blank')"/>
+                <img src="{% static 'images/twitter.png' %}" alt="Twitter" title="Twitter"
+                     onclick="window.open('{{ profile.twitter }}', '_blank')"/>
+                <img src="{% static 'images/linkedin.png' %}" alt="Linkedin" title="Linkedin"
+                     onclick="window.open('{{ profile.linkedin }}', '_blank')"/>
+                <img src="{% static 'images/instagram.png' %}" alt="Instagram" title="Instagram"
+                     onclick="window.open('{{ profile.instagram }}', '_blank')"/>
+            </div>
+            <p class="email">{{ profile.email }}</p>
+        </div>
+        <div class="copyrights">
+            <p>{{ profile.copyright }}</p>
+        </div>
+    </section>
 </body>
 </html>

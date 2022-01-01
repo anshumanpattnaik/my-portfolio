@@ -30,6 +30,7 @@ def projects(request):
         # Projects
         context = {
             "projects": db_client.fetch_projects(),
+            "profile": db_client.fetch_profile()[0],
             "nav_menu": Constants.NAV_MENU
         }
         return render(request, 'projects.html', context)

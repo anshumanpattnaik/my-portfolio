@@ -16,6 +16,7 @@
 }
 :root {
     --dark-color: #16181a;
+    --dark-blue: #0b132b;
     --light-color: #343a40;
     --red: #f42735;
     --light-red: #af0614;
@@ -37,6 +38,7 @@ header {
     position: fixed;
     z-index: 9999;
     border-bottom: 0.5px solid var(--dark-color);
+    opacity: 0.9;
     background: var(--dark-color);
 }
 .logo {
@@ -297,13 +299,16 @@ label {
     cursor: pointer;
     background-color: var(--background);
 }
+.margin {
+    margin-top: 4vw;
+}
 .projects {
     width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;
     padding-bottom: 5vh;
-    background-color: var(--dark-color);
+    background-color: var(--dark-blue);
 }
 .projects > .container {
     margin-left: 4.2vw;
@@ -674,6 +679,9 @@ label {
         margin: 0.8vw;
         padding: 2vw 2.5vw 2vw 2.5vw;
         border-radius: 0.5vw;
+    }
+    .margin {
+        margin-top: 10vw;
     }
     .projects {
         justify-content: center;
