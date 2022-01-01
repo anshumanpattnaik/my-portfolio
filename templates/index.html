@@ -39,7 +39,7 @@
                      onclick="window.open('https://www.instagram.com/anshuman.pattnaik', '_blank')"/>
         </div>
         <div class="button-container">
-            <button class="projects">Projects</button>
+            <button class="projects-btn">Projects</button>
         </div>
     </section>
     <section class="about-me">
@@ -78,7 +78,29 @@
                 {% endfor %}
             </div>
         </div>
-    </div>
+    </section>
+    <section class="projects">
+        <div class="container">
+            <label>Projects</label>
+            <div class="red-divider"></div>
+        </div>
+        <div class="list-container">
+            {% for project in projects|slice:":3" %}
+                <div class="projects-item" style="background-color: {{ project.color_code }}">
+                    <div class="title-container">
+                        <span class="title">{{ project.title }}</span>
+                    </div>
+                    <div class="thumbnail-container">
+                        <img src="{{ project.thumbnail }}" class="thumbnail" alt=""/>
+                    </div>
+                    <div class="tech-stack-container">
+                        {% for tech_stack in project.tech_stack %}
+                            <span class="label">{{ tech_stack }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </section>
 </body>
 </html>

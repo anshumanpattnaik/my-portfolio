@@ -139,7 +139,7 @@ label {
     margin-top: 3em;
     /*background-color: aquamarine;*/
 }
-.introduction > .button-container > .projects {
+.introduction > .button-container > .projects-btn {
     width: 12vw;
     height: 6vh;
     font-family: PoppinsBold, serif;
@@ -151,7 +151,7 @@ label {
     transition: .3s;
     background-color: var(--red);
 }
-.introduction > .button-container > .projects:hover {
+.introduction > .button-container > .projects-btn:hover {
     cursor: pointer;
     background-color: var(--light-red);
 }
@@ -296,6 +296,70 @@ label {
     cursor: pointer;
     background-color: var(--background);
 }
+.projects {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    background-color: var(--dark-color);
+}
+.projects > .container {
+    margin-left: 5em;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+}
+.projects > .list-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+}
+.projects-item {
+    width: 29.5vw;
+    /*height: 60vh;*/
+    cursor: pointer;
+    transition: transform 500ms;
+    will-change: transform;
+    margin: 0.8vw;
+    padding-bottom: 5vh;
+}
+.projects-item:hover, .projects-item:focus {
+    transform: translateY(-20px);
+}
+.projects > .list-container > .projects-item > .title-container {
+    height: 5vh;
+    display: flex;
+    margin: 1.8em;
+}
+.projects > .list-container > .projects-item > .title-container > .title {
+    font-family: PoppinsBold, serif;
+    font-size: 1.5vw;
+    color: #FFF;
+}
+.projects > .list-container > .projects-item > .thumbnail-container {
+    /*height: 45vh;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: #f42735;*/
+}
+.projects > .list-container > .projects-item > .thumbnail-container > .thumbnail {
+    width: 90%;
+    display: block;
+}
+.projects > .list-container > .projects-item > .tech-stack-container {
+    display: flex;
+    align-items: center;
+}
+.projects > .list-container > .projects-item > .tech-stack-container > .label {
+    font-family: PoppinsRegular, serif;
+    font-size: 0.9vw;
+    color: #FFF;
+    margin-left: 1vw;
+}
 @media only screen and (max-width: 950px) {
     header {
         height: 4em;
@@ -385,7 +449,7 @@ label {
         justify-content: center;
         margin-top: 3em;
     }
-    .introduction > .button-container > .projects {
+    .introduction > .button-container > .projects-btn {
         width: 60vw;
         height: 15vw;
         font-size: 3.5vw;
@@ -395,7 +459,6 @@ label {
         justify-content: center;
         align-items: center;
         padding-bottom: 5vh;
-        background-color: var(--dark-color);
     }
     .about-me > .container {
         display: flex;
@@ -445,7 +508,6 @@ label {
         display: flex;
         flex-direction: column;
         padding-bottom: 5vh;
-        background-color: #2a3035;
     }
     .technical-skills > .container {
         display: flex;
@@ -475,5 +537,49 @@ label {
         margin: 0.8vw;
         padding: 2vw 2.5vw 2vw 2.5vw;
         border-radius: 0.5vw;
+    }
+    .projects {
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5vh;
+    }
+    .projects > .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 2.5em;
+    }
+    .projects > .list-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3vh;
+    }
+    .projects-item {
+        width: 90vw;
+        margin: 4vw;
+        justify-content: center;
+        padding-bottom: 5vh;
+    }
+    .projects > .list-container > .projects-item > .title-container {
+        height: 5vh;
+        margin: 1.8em;
+    }
+    .projects > .list-container > .projects-item > .title-container > .title {
+        font-size: 6vw;
+    }
+    .projects > .list-container > .projects-item > .thumbnail-container > .thumbnail {
+        width: 90%;
+        display: block;
+    }
+    .projects > .list-container > .projects-item > .tech-stack-container {
+        display: flex;
+        align-items: center;
+    }
+    .projects > .list-container > .projects-item > .tech-stack-container > .label {
+        font-size: 3vw;
+        margin-left: 5vw;
     }
 }
