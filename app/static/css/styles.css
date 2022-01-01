@@ -46,6 +46,11 @@ header {
     font-size: 1.5vw;
     color: var(--red);
     margin-left: 2em;
+    text-decoration: none;
+    transition: .3s;
+}
+.logo:hover {
+    color: var(--light-red);
 }
 .desktop-nav-container {
     height: 5em;
