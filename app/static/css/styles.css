@@ -777,4 +777,39 @@ label {
         margin-top: 0.5em;
         border: 1.5px solid #FFFFFF;
     }
+    .footer {
+        height: 70vh;
+    }
+    .footer > .container {
+        height: 60vh;
+    }
+    .footer > .container > .follow-me {
+        font-size: 15vw;
+    }
+    .footer > .container > .social-media {
+        height: 10vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10vw;
+    }
+    .footer > .container > .social-media > img {
+        width: 7vw;
+        height: 7vw;
+        margin: 5vw;
+        cursor: pointer;
+    }
+    .footer > .container > .email {
+        font-size: 4vw;
+        margin-top: 10vw;
+    }
+    .footer > .copyrights {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer > .copyrights > p {
+        font-size: 3vw;
+    }
 }
