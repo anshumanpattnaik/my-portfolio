@@ -16,6 +16,7 @@
 }
 :root {
     --dark-color: #16181a;
+    --light-color: #343a40;
     --red: #f42735;
     --light-red: #af0614;
     --background: #1a1b1d;
@@ -444,6 +445,57 @@ label {
     cursor: pointer;
     color: var(--red);
     background: #FFFFFF;
+}
+.footer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-color);
+}
+.footer > .container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer > .container > .follow-me {
+    font-family: BebasNeueRegular, serif;
+    font-size: 3vw;
+    color: #FFFFFF;
+}
+.footer > .container > .social-media {
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5vw;
+    /*background-color: #f42735;*/
+}
+.footer > .container > .social-media > img {
+    width: 2vw;
+    height: 2vw;
+    margin: 2vw;
+    cursor: pointer;
+}
+.footer > .container > .email {
+    font-family: PoppinsBold, serif;
+    font-size: 1vw;
+    color: var(--red);
+}
+.footer > .copyrights {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer > .copyrights > p {
+    font-family: PoppinsRegular, serif;
+    font-size: 0.7vw;
+    color: var(--light-color);
 }
 @media only screen and (max-width: 950px) {
     header {

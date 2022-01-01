@@ -41,8 +41,15 @@ class Project(models.Model):
 class Profile(models.Model):
     full_name = models.CharField(max_length=100)
     photo = models.CharField(max_length=100)
+    email = models.CharField(max_length=100, blank=True)
     designation = models.CharField(max_length=100)
     about_me = models.TextField()
+    copyright = models.CharField(max_length=1000, blank=True)
+    github = models.CharField(max_length=1000, blank=True)
+    twitter = models.CharField(max_length=1000, blank=True)
+    linkedin = models.CharField(max_length=1000, blank=True)
+    facebook = models.CharField(max_length=1000, blank=True)
+    instagram = models.CharField(max_length=1000, blank=True)
     published_date = models.DateTimeField(auto_now_add=True)
     last_updated_date = models.DateTimeField(auto_now=True)
 
