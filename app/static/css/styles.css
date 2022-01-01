@@ -550,7 +550,7 @@ label {
         flex-direction: column;
         align-items: center;
         margin-left: 0;
-        margin-top: 3em;
+        margin-top: 2.5em;
     }
     .about-me > .container > .profile {
         flex-direction: column;
@@ -677,6 +677,52 @@ label {
         height: 15vw;
         font-size: 3vw;
         margin-top: 2em;
+        border: 1.5px solid #FFFFFF;
+    }
+    .blogs {
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5vh;
+    }
+    .blogs > .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 2.5em;
+    }
+    .blogs > .list-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+    }
+    .blogs > .list-container > .blogs-item {
+        width: 90vw;
+        margin: 0.1vw;
+        justify-content: center;
+        padding-bottom: 3vh;
+    }
+    .blogs > .list-container > .blogs-item > .thumbnail-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .blogs > .list-container > .blogs-item > .thumbnail-container > .thumbnail {
+        width: 90vw;
+        display: block;
+    }
+    .blogs > .read-blogs {
+        justify-content: center;
+        margin-top: 1vw;
+        margin-left: 0;
+    }
+    .blogs > .read-blogs > button {
+        width: 60vw;
+        height: 15vw;
+        font-size: 3vw;
+        margin-top: 0.5em;
         border: 1.5px solid #FFFFFF;
     }
 }
