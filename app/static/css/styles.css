@@ -360,6 +360,27 @@ label {
     color: #FFF;
     margin-left: 1vw;
 }
+.projects > .view-projects {
+    width: 100vw;
+    display: flex;
+    margin-top: 3em;
+    margin-left: 5em;
+}
+.projects > .view-projects > button {
+    width: 12vw;
+    height: 3.5vw;
+    font-family: PoppinsBold, serif;
+    font-size: 0.8vw;
+    color: #FFFFFF;
+    transition: .3s;
+    border: 2.2px solid #FFFFFF;
+    background: transparent;
+}
+.projects > .view-projects > button:hover {
+    cursor: pointer;
+    color: var(--red);
+    background: #FFFFFF;
+}
 @media only screen and (max-width: 950px) {
     header {
         height: 4em;
@@ -581,5 +602,17 @@ label {
     .projects > .list-container > .projects-item > .tech-stack-container > .label {
         font-size: 3vw;
         margin-left: 5vw;
+    }
+    .projects > .view-projects {
+        justify-content: center;
+        margin-top: 2vw;
+        margin-left: 0;
+    }
+    .projects > .view-projects > button {
+        width: 60vw;
+        height: 15vw;
+        font-size: 3vw;
+        margin-top: 2em;
+        border: 1.5px solid #FFFFFF;
     }
 }
