@@ -105,5 +105,23 @@
             <button>VIEW ALL PROJECTS</button>
         </p>
     </section>
+    <section class="blogs">
+        <div class="container">
+            <label>Blogs</label>
+            <div class="red-divider"></div>
+        </div>
+        <div class="list-container">
+            {% for blog in blogs %}
+                <div class="blogs-item">
+                    <div class="thumbnail-container">
+                        <img src="{{ blog.thumbnail }}" class="thumbnail" alt=""/>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <p class="read-blogs">
+            <button>READ BLOGS</button>
+        </p>
+    </section>
 </body>
 </html>

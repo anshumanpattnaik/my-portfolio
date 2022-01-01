@@ -49,3 +49,15 @@ class Profile(models.Model):
     class Meta:
         managed = True
         db_table = 'profile'
+
+
+class Blog(models.Model):
+    title = models.CharField(max_length=100)
+    thumbnail = models.CharField(max_length=1000)
+    link = models.CharField(max_length=1000)
+    published_date = models.DateTimeField(auto_now_add=True)
+    last_updated_date = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        managed = True
+        db_table = 'blog'

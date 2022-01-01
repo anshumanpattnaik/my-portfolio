@@ -19,6 +19,7 @@ def index(request):
             "skills": tech_skills,
             "projects": db_client.fetch_projects(),
             "profile": db_client.fetch_profile()[0],
+            "blogs": db_client.fetch_blogs(),
             "nav_menu": Constants.NAV_MENU
         }
         return render(request, 'index.html', context)
