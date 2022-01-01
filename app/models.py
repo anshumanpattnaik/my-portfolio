@@ -61,3 +61,4 @@ class Blog(models.Model):
     class Meta:
         managed = True
         db_table = 'blog'
+        ordering = ['-published_date']
