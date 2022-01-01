@@ -61,7 +61,24 @@
         <div class="container">
             <label>Technical Skills</label>
             <div class="red-divider"></div>
+            <div class="tech-platforms-container">
+                {% for skill in skills %}
+                    <div class="list-container">
+                        <p class="platforms-label">{{ skill.platform }}</p>
+                        <div class="divider-container">
+                            <div class="divider"></div>
+                            <div class="divider-dot"></div>
+                        </div>
+                        <div class="tech-stack-container">
+                            {% for tech_stack in skill.tech_stack %}
+                                <a href="{{ tech_stack.domain_url }}" class="tech-stack" target="_blank">{{ tech_stack.domain }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
+    </div>
     </section>
 </body>
 </html>

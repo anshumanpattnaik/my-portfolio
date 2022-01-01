@@ -234,7 +234,7 @@ label {
 }
 .technical-skills {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding-bottom: 5vh;
@@ -245,6 +245,56 @@ label {
     margin-top: 5em;
     display: flex;
     flex-direction: column;
+}
+.technical-skills > .container > .tech-platforms-container {
+    margin-top: 3vh;
+}
+.technical-skills > .container > .tech-platforms-container > .list-container {
+    display: grid;
+    grid-template-columns: 15vw 10vw auto;
+    align-items: center;
+}
+.list-container > .platforms-label {
+    font-family: PoppinsBold, serif;
+    font-size: 1vw;
+    color: #FFF;
+}
+.tech-platforms-container > .list-container > .divider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3vw;
+}
+.tech-platforms-container > .list-container > .divider-container > .divider {
+    width: 0.1vw;
+    height: 3.5vw;
+    background-color: #FFFFFF;
+}
+.tech-platforms-container > .list-container > .divider-container > .divider-dot {
+    width: 0.5vw;
+    height: 0.5vw;
+    border-radius: 5vw;
+    background-color: #FFF;
+}
+.tech-stack-container {
+    display: flex;
+    align-items: center;
+    margin-left: 1vw;
+}
+.tech-stack-container > .tech-stack {
+    font-family: PoppinsBold, serif;
+    font-size: 0.8vw;
+    color: #FFF;
+    margin: 0.8vw;
+    padding: 0.5vw 1.3vw 0.5vw 1.3vw;
+    border-radius: 0.15vw;
+    text-decoration: none;
+    transition: .3s;
+    background-color: var(--dark-color);
+}
+.tech-stack-container > .tech-stack:hover {
+    cursor: pointer;
+    background-color: var(--background);
 }
 @media only screen and (max-width: 950px) {
     header {
@@ -388,5 +438,42 @@ label {
         font-size: 3vw;
         margin-top: 2em;
         border: 1.5px solid #FFFFFF;
+    }
+    .technical-skills {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5vh;
+        background-color: #2a3035;
+    }
+    .technical-skills > .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 2.5em;
+    }
+    .technical-skills > .container > .tech-platforms-container {
+        margin-top: 3vh;
+    }
+    .technical-skills > .container > .tech-platforms-container > .list-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .list-container > .platforms-label {
+        font-size: 5vw;
+    }
+    .tech-platforms-container > .list-container > .divider-container {
+        display: none;
+    }
+    .tech-stack-container {
+        margin-left: 0;
+    }
+    .tech-stack-container > .tech-stack {
+        font-size: 3vw;
+        margin: 0.8vw;
+        padding: 2vw 2.5vw 2vw 2.5vw;
+        border-radius: 0.5vw;
     }
 }
