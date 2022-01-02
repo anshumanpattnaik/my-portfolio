@@ -8,6 +8,8 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.css">
+    <script src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js" async></script>
 </head>
 <body>
     <header>
@@ -91,7 +93,9 @@
                         <span class="title">{{ project.title }}</span>
                     </div>
                     <div class="thumbnail-container">
-                        <img src="{{ project.small_thumbnail }}" class="thumbnail" alt=""/>
+                        <a href="{{ project.small_thumbnail }}" class="progressive replace" id="thumbnail">
+                            <img src="{{ project.small_thumbnail }}" class="preview" id="thumbnail" alt="image" />
+                        </a>
                     </div>
                     <div class="footer">
                         <div class="container">

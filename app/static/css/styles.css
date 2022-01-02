@@ -350,11 +350,12 @@ label {
     color: #FFF;
 }
 .projects-item > .thumbnail-container {
+    min-height: 15vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.projects-item > .thumbnail-container > .thumbnail {
+.projects-item > .thumbnail-container > #thumbnail {
     width: 90%;
     display: block;
 }
@@ -374,7 +375,7 @@ label {
     justify-content: flex-start;
 }
 .projects-item > .footer > .container > .tech-stack {
-    height: 4vh;
+    height: 2vw;
     display: flex;
 }
 .projects-item > .footer > .container > .tech-stack > .label {
@@ -777,7 +778,7 @@ label {
     .projects > .list-container > .projects-item > .title-container > .title {
         font-size: 6vw;
     }
-    .projects > .list-container > .projects-item > .thumbnail-container > .thumbnail {
+    .projects > .list-container > .projects-item > .thumbnail-container > #thumbnail {
         width: 90%;
         display: block;
     }
