@@ -86,7 +86,7 @@
         </div>
         <div class="list-container">
             {% for project in projects|slice:":3" %}
-                <a href="/projects/{{ project.project_id }}" class="projects-item" style="background-color: {{ project.color_code }}">
+                <div class="projects-item" style="background-color: {{ project.color_code }}">
                     <div class="title-container">
                         <span class="title">{{ project.title }}</span>
                     </div>
@@ -98,7 +98,25 @@
                             <span class="label">{{ tech_stack }}</span>
                         {% endfor %}
                     </div>
-                </a>
+                    <div class="white-divider"></div>
+                    <div class="project-source">
+                        {% if project.project_link %}
+                            <a href="{{ project.project_link }}" class="link" target="_blank">
+                                <img src="{% static 'images/link.png' %}" alt="Link" title="Link"/>
+                            </a>
+                        {% endif %}
+                        {% if project.youtube_link %}
+                            <a href="{{ project.youtube_link }}" class="youtube" target="_blank">
+                                <img src="{% static 'images/youtube_btn.png' %}" alt="YouTube" title="YouTube"/>
+                            </a>
+                        {% endif %}
+                        {% if project.github_link %}
+                            <a href="{{ project.github_link }}" class="github" target="_blank">
+                                <img src="{% static 'images/github_btn.png' %}" alt="GitHub" title="GitHub"/>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
             {% endfor %}
         </div>
         <p class="view-projects">
