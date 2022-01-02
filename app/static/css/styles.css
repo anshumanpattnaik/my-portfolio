@@ -95,7 +95,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*background-color: aqua;*/
 }
 .introduction > .text-container > .hello {
     font-family: BebasNeueRegular, serif;
