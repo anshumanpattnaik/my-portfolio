@@ -27,7 +27,6 @@ def index(request):
 
 def projects(request):
     with DBClient() as db_client:
-        # Projects
         context = {
             "projects": db_client.fetch_projects(),
             "profile": db_client.fetch_profile()[0],

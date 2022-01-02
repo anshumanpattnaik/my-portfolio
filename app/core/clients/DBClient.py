@@ -22,6 +22,10 @@ class DBClient:
         return Project.objects.all()
 
     @staticmethod
+    def fetch_projects_by_id(project_id):
+        return Project.objects.filter(project_id=project_id)
+
+    @staticmethod
     def fetch_profile():
         return Profile.objects.all()
 

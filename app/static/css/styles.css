@@ -328,48 +328,93 @@ label {
     align-items: center;
     margin-top: 3vh;
 }
-.projects-item {
+.projects > .list-container > .projects-item {
     width: 29.5vw;
-    /*height: 60vh;*/
-    cursor: pointer;
     transition: transform 500ms;
     will-change: transform;
     margin: 0.8vw;
-    padding-bottom: 5vh;
+    padding-bottom: 1vh;
+    text-decoration: none;
 }
 .projects-item:hover, .projects-item:focus {
     transform: translateY(-20px);
 }
-.projects > .list-container > .projects-item > .title-container {
+.projects-item > .title-container {
     height: 5vh;
     display: flex;
     margin: 1.8em;
 }
-.projects > .list-container > .projects-item > .title-container > .title {
+.projects-item > .title-container > .title {
     font-family: PoppinsBold, serif;
     font-size: 1.5vw;
     color: #FFF;
 }
-.projects > .list-container > .projects-item > .thumbnail-container {
-    /*height: 45vh;*/
+.projects-item > .thumbnail-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*background-color: #f42735;*/
 }
-.projects > .list-container > .projects-item > .thumbnail-container > .thumbnail {
+.projects-item > .thumbnail-container > .thumbnail {
     width: 90%;
     display: block;
 }
-.projects > .list-container > .projects-item > .tech-stack-container {
+.projects-item > .tech-stack-container {
+    height: 3vw;
     display: flex;
     align-items: center;
 }
-.projects > .list-container > .projects-item > .tech-stack-container > .label {
+.projects-item > .tech-stack-container > .label {
     font-family: PoppinsRegular, serif;
     font-size: 0.9vw;
     color: #FFF;
+    margin-left: 0.3vw;
+    padding-right: 0.5vw;
+}
+.projects-item > .project-source {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 0.5vw;
+}
+.projects-item > .white-divider {
+    height: 0.1px;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    background-color: #cdcdcd;
+}
+.projects-item > .project-source > .github {
+    display: flex;
+    align-items: center;
+    padding: 0.5vw;
+    text-decoration: none;
+}
+.projects-item > .project-source > .github > img {
+    width: 1.5vw;
+    height: 1.5vw;
+}
+.projects-item > .project-source > .youtube {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5vw;
+    padding: 0.5vw;
+    text-decoration: none;
+}
+.projects-item > .project-source > .youtube > img {
+    width: 1.5vw;
+    height: 1.5vw;
+}
+.projects-item > .project-source > .link {
+    display: flex;
+    align-items: center;
+    margin-right: 0.6vw;
+    padding: 0.5vw;
+    text-decoration: none;
+}
+.projects-item > .project-source > .link > img {
+    width: 1.5vw;
+    height: 1.5vw;
 }
 .projects > .view-projects {
     width: 100vw;
@@ -707,11 +752,11 @@ label {
         align-items: center;
         margin-top: 3vh;
     }
-    .projects-item {
+    .projects > .list-container > .projects-item {
         width: 90vw;
         margin: 4vw;
         justify-content: center;
-        padding-bottom: 5vh;
+        padding-bottom: 1vh;
     }
     .projects > .list-container > .projects-item > .title-container {
         height: 5vh;
@@ -725,12 +770,57 @@ label {
         display: block;
     }
     .projects > .list-container > .projects-item > .tech-stack-container {
+        height: 10vw;
         display: flex;
         align-items: center;
+        /*background-color: #f42735;*/
     }
     .projects > .list-container > .projects-item > .tech-stack-container > .label {
         font-size: 3vw;
-        margin-left: 5vw;
+        margin-left: 6.5vw;
+    }
+    .projects-item > .project-source {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: 1vw;
+        margin-right: 5vw;
+        margin-top: 3vw;
+    }
+    .projects-item > .white-divider {
+        height: 0.1px;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        background-color: #cdcdcd;
+    }
+    .projects-item > .project-source > .github {
+        display: flex;
+        align-items: center;
+        padding: 0.5vw;
+    }
+    .projects-item > .project-source > .github > img {
+        width: 6vw;
+        height: 6vw;
+    }
+    .projects-item > .project-source > .youtube {
+        display: flex;
+        align-items: center;
+        margin-right: 4vw;
+        padding: 0.5vw;
+    }
+    .projects-item > .project-source > .youtube > img {
+        width: 6vw;
+        height: 6vw;
+    }
+    .projects-item > .project-source > .link {
+        display: flex;
+        align-items: center;
+        margin-right: 4vw;
+        padding: 0.5vw;
+    }
+    .projects-item > .project-source > .link > img {
+        width: 6vw;
+        height: 6vw;
     }
     .projects > .view-projects {
         justify-content: center;

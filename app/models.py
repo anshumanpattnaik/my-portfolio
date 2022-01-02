@@ -21,8 +21,10 @@ class TechStack(models.Model):
 
 
 class Project(models.Model):
+    project_id = models.CharField(max_length=100, blank=True)
     title = models.CharField(max_length=100, blank=True)
-    thumbnail = models.CharField(max_length=100, blank=True)
+    small_thumbnail = models.CharField(max_length=100, blank=True)
+    large_thumbnail = models.CharField(max_length=100, blank=True)
     description = models.TextField(blank=True)
     github_link = models.CharField(max_length=100, blank=True)
     youtube_link = models.CharField(max_length=100, blank=True)
