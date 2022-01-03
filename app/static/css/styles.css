@@ -38,7 +38,7 @@ header {
     position: fixed;
     z-index: 9999;
     border-bottom: 0.5px solid var(--dark-color);
-    opacity: 0.9;
+    opacity: 0.95;
     background: var(--dark-color);
 }
 .logo {
@@ -69,11 +69,11 @@ header {
     list-style: none;
 }
 .desktop-nav-container nav li {
-    margin-right: 3.5em;
+    margin-right: 5em;
 }
 .desktop-nav-container nav a {
     font-family: BebasNeueRegular, serif;
-    font-size: 1vw;
+    font-size: 1.1vw;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -564,9 +564,10 @@ label {
 @media only screen and (max-width: 950px) {
     header {
         height: 4em;
+        border-bottom: 0.5px solid #212529;
     }
     .logo {
-        font-size: 5vw;
+        font-size: 7vw;
         margin-left: 1em;
     }
     .desktop-nav-container {
@@ -574,12 +575,13 @@ label {
     }
     .mobile-nav-container {
         width: 100vw;
-        display: none;
+        display: grid;
         grid-template-columns: auto auto auto auto auto auto;
         align-items: center;
         position: fixed;
         bottom: 0;
-        border-top: 0.5px solid var(--dark-color);
+        border-top: 0.5px solid #212529;
+        background-color: var(--dark-color);
     }
     .mobile-nav-container nav {
         display: flex;
@@ -597,6 +599,7 @@ label {
         margin: 1em;
     }
     .mobile-nav-container nav a {
+        font-family: BebasNeueRegular, serif;
         font-size: 0.8rem;
         color: white;
         text-decoration: none;
