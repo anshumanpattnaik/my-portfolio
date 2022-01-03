@@ -622,6 +622,7 @@ label {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-left: 0;
     }
     .introduction > .text-container > .hello {
         font-size: 10vw;
@@ -648,6 +649,7 @@ label {
     }
     .introduction > .social-media-container {
         margin-top: 3em;
+        margin-left: 0;
     }
     .introduction > .social-media-container > img {
         width: 7vw;
@@ -659,6 +661,7 @@ label {
         width: 100vw;
         justify-content: center;
         margin-top: 3em;
+        margin-left: 0;
     }
     .introduction > .button-container > .projects-btn {
         width: 60vw;
