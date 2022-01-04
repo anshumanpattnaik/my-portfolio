@@ -33,7 +33,7 @@ html, body {
 }
 header {
     width: 100%;
-    height: 5em;
+    height: 8vh;
     display: flex;
     align-items: center;
     position: fixed;
@@ -182,7 +182,7 @@ label {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding-top: 5vh;
+    padding-top: 8vh;
     padding-bottom: 5vh;
     background-color: var(--dark-color);
 }
@@ -248,7 +248,7 @@ label {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding-top: 5vh;
+    padding-top: 8vh;
     padding-bottom: 5vh;
     background-color: #2a3035;
 }
@@ -316,7 +316,7 @@ label {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding-top: 5vh;
+    padding-top: 8vh;
     padding-bottom: 5vh;
     background-color: var(--dark-blue);
 }
@@ -457,7 +457,7 @@ label {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding-top: 5vh;
+    padding-top: 8vh;
     padding-bottom: 5vh;
     background-color: #2b2d42;
 }
@@ -577,10 +577,10 @@ label {
         font-size: 7vw;
         margin-left: 1em;
     }
+    /*.desktop-nav-container {*/
+    /*    display: none;*/
+    /*}*/
     .desktop-nav-container {
-        display: none;
-    }
-    .mobile-nav-container {
         width: 100vw;
         display: grid;
         grid-template-columns: auto auto auto auto auto auto;
@@ -590,10 +590,10 @@ label {
         border-top: 0.5px solid #212529;
         background-color: var(--dark-color);
     }
-    .mobile-nav-container nav {
+    .desktop-nav-container nav {
         display: flex;
     }
-    .mobile-nav-container nav ul {
+    .desktop-nav-container nav ul {
         width: 100vw;
         display: flex;
         align-items: center;
@@ -602,11 +602,10 @@ label {
         padding: 0;
         list-style: none;
     }
-    .mobile-nav-container nav li {
+    .desktop-nav-container nav li {
         margin: 1em;
     }
-    .mobile-nav-container nav a {
-        font-family: BebasNeueRegular, serif;
+    .desktop-nav-container nav a {
         font-size: 0.8rem;
         color: white;
         text-decoration: none;

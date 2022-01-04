@@ -14,9 +14,7 @@
 <body>
     <header>
         <a href="/" class="logo">My Portfolio</a>
-        <div class="desktop-nav-container">
-            {{ nav_menu|safe }}
-        </div>
+        <div class="desktop-nav-container"></div>
         <div class="mobile-nav-container">
             {{ nav_menu|safe }}
         </div>
@@ -172,5 +170,6 @@
             <p>{{ profile.copyright }}</p>
         </div>
     </section>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
