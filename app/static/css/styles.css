@@ -26,10 +26,7 @@ html, body {
     margin: 0;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-color: var(--background);
-}
-.mobile-nav-container {
-    display: none;
+    /*background-color: var(--background);*/
 }
 header {
     width: 100%;
@@ -84,18 +81,32 @@ header {
     cursor: pointer;
     color: var(--red);
 }
+.background {
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+}
+.opacity {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 0.8;
+    background-color: #0d0e0e;
+}
 .introduction {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /*background-color: var(--background);*/
 }
 .introduction > .text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 4em;
+    z-index: 999;
 }
 .introduction > .text-container > .hello {
     font-family: BebasNeueRegular, serif;
@@ -133,6 +144,7 @@ label {
     align-items: flex-end;
     margin-top: 1.5em;
     margin-left: 4em;
+    z-index: 999;
 }
 .introduction > .social-media-container > img {
     width: 1.5vw;
@@ -147,6 +159,7 @@ label {
     display: flex;
     margin-top: 3em;
     margin-left: 4em;
+    z-index: 999;
     /*background-color: aquamarine;*/
 }
 .introduction > .button-container > .projects-btn {
@@ -570,18 +583,16 @@ label {
 }
 @media only screen and (max-width: 950px) {
     header {
-        height: 4em;
+        height: 10vh;
         border-bottom: 0.5px solid #212529;
     }
     .logo {
         font-size: 7vw;
         margin-left: 1em;
     }
-    /*.desktop-nav-container {*/
-    /*    display: none;*/
-    /*}*/
     .desktop-nav-container {
         width: 100vw;
+        height: 8vh;
         display: grid;
         grid-template-columns: auto auto auto auto auto auto;
         align-items: center;

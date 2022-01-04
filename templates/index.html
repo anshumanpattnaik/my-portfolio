@@ -15,11 +15,10 @@
     <header>
         <a href="/" class="logo">My Portfolio</a>
         <div class="desktop-nav-container"></div>
-        <div class="mobile-nav-container">
-            {{ nav_menu|safe }}
-        </div>
     </header>
     <section class="introduction" id="home">
+        <img src="{% static 'images/cartoonize1.png' %}" class="background" alt=""/>
+        <div class="opacity"></div>
         <div class="text-container">
             <span class="hello">Hello,</span>
             <span class="i-am">I'm <span class="name">{{ profile.full_name }}</span></span>
