@@ -13,33 +13,33 @@
 </head>
 <body>
     <header>
-        <a href="/" class="logo">My Portfolio</a>
-        <div class="desktop-nav-container"></div>
+        <a href="/" class="logo">My Portfolio.</a>
+        <div class="nav-container"></div>
     </header>
     <section class="introduction" id="home">
         <img src="{% static 'images/cartoonize1.png' %}" class="background" alt=""/>
-        <div class="opacity"></div>
-        <div class="text-container">
-            <span class="hello">Hello,</span>
-            <span class="i-am">I'm <span class="name">{{ profile.full_name }}</span></span>
-            <span class="designation">{{ profile.designation }}</span>
-            <div class="red-divider"></div>
-        </div>
-        <div class="social-media-container">
-            <img src="{% static 'images/github.png' %}" alt="GitHub" title="GitHub"
-                 onclick="window.open('{{ profile.github }}', '_blank')"/>
-            <img src="{% static 'images/facebook.png' %}" alt="Facebook" title="Facebook"
-                 onclick="window.open('{{ profile.facebook }}', '_blank')"/>
-            <img src="{% static 'images/twitter.png' %}" alt="Twitter" title="Twitter"
-                 onclick="window.open('{{ profile.twitter }}', '_blank')"/>
-            <img src="{% static 'images/linkedin.png' %}" alt="Linkedin" title="Linkedin"
-                 onclick="window.open('{{ profile.linkedin }}', '_blank')"/>
-            <img src="{% static 'images/instagram.png' %}" alt="Instagram" title="Instagram"
-                 onclick="window.open('{{ profile.instagram }}', '_blank')"/>
-        </div>
-        <div class="button-container">
-            <button class="projects-btn">Projects</button>
-        </div>
+
+{#        <div class="text-container">#}
+{#            <span class="hello">Hello,</span>#}
+{#            <span class="i-am">I'm <span class="name">{{ profile.full_name }}</span></span>#}
+{#            <span class="designation">{{ profile.designation }}</span>#}
+{#            <div class="red-divider"></div>#}
+{#        </div>#}
+{#        <div class="social-media-container">#}
+{#            <img src="{% static 'images/github.png' %}" alt="GitHub" title="GitHub"#}
+{#                 onclick="window.open('{{ profile.github }}', '_blank')"/>#}
+{#            <img src="{% static 'images/facebook.png' %}" alt="Facebook" title="Facebook"#}
+{#                 onclick="window.open('{{ profile.facebook }}', '_blank')"/>#}
+{#            <img src="{% static 'images/twitter.png' %}" alt="Twitter" title="Twitter"#}
+{#                 onclick="window.open('{{ profile.twitter }}', '_blank')"/>#}
+{#            <img src="{% static 'images/linkedin.png' %}" alt="Linkedin" title="Linkedin"#}
+{#                 onclick="window.open('{{ profile.linkedin }}', '_blank')"/>#}
+{#            <img src="{% static 'images/instagram.png' %}" alt="Instagram" title="Instagram"#}
+{#                 onclick="window.open('{{ profile.instagram }}', '_blank')"/>#}
+{#        </div>#}
+{#        <div class="button-container">#}
+{#            <button class="projects-btn">Projects</button>#}
+{#        </div>#}
     </section>
     <section class="about-me" id="about-me">
         <div class="container">
@@ -125,7 +125,7 @@
             {% endfor %}
         </div>
         <p class="view-projects">
-            <button onclick="window.open('/projects')">VIEW ALL PROJECTS</button>
+            <button onclick="window.location.replace('/projects')">VIEW ALL PROJECTS</button>
         </p>
     </section>
     <section class="blogs" id="blogs">

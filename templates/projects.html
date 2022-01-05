@@ -13,12 +13,9 @@
 </head>
 <body>
     <header>
-        <a href="/" class="logo">My Portfolio</a>
-        <div class="desktop-nav-container">
-            {{ nav_menu|safe }}
-        </div>
+        <a href="/" class="logo">My Portfolio.</a>
+        <div class="nav-container"></div>
     </header>
-    <div class="margin"></div>
     <section class="projects">
         <div class="container">
             <label>Projects</label>
@@ -88,5 +85,6 @@
             <p>{{ profile.copyright }}</p>
         </div>
     </section>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

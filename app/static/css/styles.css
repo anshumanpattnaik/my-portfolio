@@ -14,6 +14,18 @@
     font-family: BakbakOneRegular;
     src: url(../font/BakbakOne-Regular.ttf);
 }
+@font-face {
+    font-family: RighteousRegular;
+    src: url(../font/Righteous-Regular.ttf);
+}
+@font-face {
+    font-family: SpartanRegular;
+    src: url(../font/Spartan-Regular.ttf);
+}
+@font-face {
+    font-family: SpartanBold;
+    src: url(../font/Spartan-Bold.ttf);
+}
 :root {
     --dark-color: #16181a;
     --dark-blue: #0b132b;
@@ -29,77 +41,68 @@ html, body {
     /*background-color: var(--background);*/
 }
 header {
-    width: 100%;
+    width: 100vw;
     height: 8vh;
     display: flex;
     align-items: center;
     position: fixed;
     z-index: 9999;
-    border-bottom: 0.5px solid var(--dark-color);
+    /*border-bottom: 0.5px solid var(--dark-color);*/
     opacity: 0.95;
-    background: var(--dark-color);
+    background: #121212;
 }
 .logo {
-    font-family: BebasNeueRegular, serif;
-    font-size: 1.5vw;
-    color: var(--red);
-    margin-left: 2em;
+    font-family: RighteousRegular, serif;
+    font-size: 1.5em;
+    color: #FFFFFF;
+    margin-left: 4vw;
     text-decoration: none;
     transition: .3s;
 }
 .logo:hover {
+    cursor: pointer;
     color: var(--light-red);
 }
-.desktop-nav-container {
+.nav-container {
     height: 5em;
     display: flex;
     align-items: center;
 }
-.desktop-nav-container nav {
+.nav-container nav {
     position: absolute;
     right: 0;
 }
-.desktop-nav-container nav ul {
+.nav-container nav ul {
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.desktop-nav-container nav li {
+.nav-container nav li {
     margin-right: 5em;
 }
-.desktop-nav-container nav a {
-    font-family: BebasNeueRegular, serif;
-    font-size: 1.1vw;
+.nav-container nav a {
+    font-family: SpartanBold, serif;
+    font-size: 0.6vw;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     transition: .3s;
 }
-.desktop-nav-container nav a:hover {
+.nav-container nav a:hover {
     cursor: pointer;
     color: var(--red);
 }
-.background {
-    width: 100vw;
-    position: absolute;
-    z-index: -1;
-}
-.opacity {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    opacity: 0.8;
-    background-color: #0d0e0e;
-}
 .introduction {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*background-color: var(--background);*/
+}
+.introduction > .background {
+    width: 100vw;
 }
 .introduction > .text-container {
     display: flex;
@@ -129,9 +132,10 @@ header {
     color: #FFFFFF;
 }
 label {
-    font-family: BebasNeueRegular, serif;
-    font-size: 3vw;
+    font-family: SpartanBold, serif;
+    font-size: 2vw;
     color: #FFFFFF;
+    text-transform: uppercase;
 }
 .red-divider {
     width: 2vw;
@@ -195,7 +199,7 @@ label {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding-top: 8vh;
+    padding-top: 6vh;
     padding-bottom: 5vh;
     background-color: var(--dark-color);
 }
@@ -217,19 +221,19 @@ label {
     margin-top: 0.8em;
 }
 .about-me > .container > .profile > .description {
-    width: 60vw;
+    width: 70vw;
     margin-left: 4vw;
     margin-top: 0;
 }
 .about-me > .container > .profile > .description > .text-content {
-    font-family: PoppinsRegular, serif;
-    font-size: 1vw;
+    font-family: SpartanRegular, serif;
+    font-size: 0.9vw;
     color: #FFFFFF;
     line-height: 2.5em;
 }
 .about-me > .container > .profile > .description > .text-content > a {
-    font-family: PoppinsRegular, serif;
-    font-size: 1vw;
+    font-family: SpartanRegular, serif;
+    font-size: 0.9vw;
     color: var(--red);
     text-decoration: none;
 }
@@ -241,10 +245,10 @@ label {
     margin-top: 1vw;
 }
 .about-me > .container > .profile > .description > .view-profile > button {
-    width: 12vw;
-    height: 3.5vw;
-    font-family: PoppinsBold, serif;
-    font-size: 0.8vw;
+    width: 10vw;
+    height: 3vw;
+    font-family: SpartanBold, serif;
+    font-size: 0.65vw;
     color: #FFFFFF;
     margin-top: 2em;
     transition: .3s;
@@ -261,7 +265,7 @@ label {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding-top: 8vh;
+    padding-top: 6vh;
     padding-bottom: 5vh;
     background-color: #2a3035;
 }
@@ -280,7 +284,7 @@ label {
     align-items: center;
 }
 .list-container > .platforms-label {
-    font-family: PoppinsBold, serif;
+    font-family: SpartanBold, serif;
     font-size: 1vw;
     color: #FFF;
 }
@@ -307,8 +311,8 @@ label {
     margin-left: 1vw;
 }
 .tech-stack-container > .tech-stack {
-    font-family: PoppinsBold, serif;
-    font-size: 0.8vw;
+    font-family: SpartanBold, serif;
+    font-size: 0.7vw;
     color: #FFF;
     margin: 0.8vw;
     padding: 0.5vw 1.3vw 0.5vw 1.3vw;
@@ -329,7 +333,7 @@ label {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding-top: 8vh;
+    padding-top: 6vh;
     padding-bottom: 5vh;
     background-color: var(--dark-blue);
 }
@@ -360,11 +364,11 @@ label {
 .projects-item > .title-container {
     height: 5vh;
     display: flex;
-    margin: 1.8em;
+    margin: 2.5em;
 }
 .projects-item > .title-container > .title {
-    font-family: PoppinsBold, serif;
-    font-size: 1.5vw;
+    font-family: SpartanBold, serif;
+    font-size: 1.3vw;
     color: #FFF;
 }
 .projects-item > .thumbnail-container {
@@ -397,8 +401,8 @@ label {
     display: flex;
 }
 .projects-item > .footer > .container > .tech-stack > .label {
-    font-family: PoppinsRegular, serif;
-    font-size: 0.9vw;
+    font-family: SpartanBold, serif;
+    font-size: 0.7vw;
     color: #FFF;
     padding-right: 1vw;
 }
@@ -452,9 +456,9 @@ label {
 }
 .projects > .view-projects > button {
     width: 12vw;
-    height: 3.5vw;
-    font-family: PoppinsBold, serif;
-    font-size: 0.8vw;
+    height: 3vw;
+    font-family: SpartanBold, serif;
+    font-size: 0.65vw;
     color: #FFFFFF;
     transition: .3s;
     border: 2.2px solid #FFFFFF;
@@ -470,7 +474,7 @@ label {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding-top: 8vh;
+    padding-top: 6vh;
     padding-bottom: 5vh;
     background-color: #2b2d42;
 }
@@ -516,10 +520,10 @@ label {
     margin-top: 2.5vw;
 }
 .blogs > .read-blogs > button {
-    width: 12vw;
-    height: 3.5vw;
-    font-family: PoppinsBold, serif;
-    font-size: 0.8vw;
+    width: 10vw;
+    height: 3vw;
+    font-family: SpartanBold, serif;
+    font-size: 0.65vw;
     color: #FFFFFF;
     transition: .3s;
     border: 2.2px solid #FFFFFF;
@@ -547,9 +551,10 @@ label {
     align-items: center;
 }
 .footer > .container > .follow-me {
-    font-family: BebasNeueRegular, serif;
-    font-size: 3vw;
+    font-family: SpartanBold, serif;
+    font-size: 2.5vw;
     color: #FFFFFF;
+    text-transform: uppercase;
 }
 .footer > .container > .social-media {
     height: 5vw;
@@ -566,7 +571,7 @@ label {
     cursor: pointer;
 }
 .footer > .container > .email {
-    font-family: PoppinsBold, serif;
+    font-family: SpartanBold, serif;
     font-size: 1vw;
     color: var(--red);
 }
@@ -577,22 +582,22 @@ label {
     justify-content: center;
 }
 .footer > .copyrights > p {
-    font-family: PoppinsRegular, serif;
-    font-size: 0.7vw;
-    color: var(--light-color);
+    font-family: SpartanRegular, serif;
+    font-size: 0.5vw;
+    color: #424750;
 }
 @media only screen and (max-width: 950px) {
     header {
-        height: 10vh;
+        height: 8vh;
         border-bottom: 0.5px solid #212529;
     }
     .logo {
-        font-size: 7vw;
+        font-size: 5vw;
         margin-left: 1em;
     }
-    .desktop-nav-container {
+    .nav-container {
         width: 100vw;
-        height: 8vh;
+        height: 7vh;
         display: grid;
         grid-template-columns: auto auto auto auto auto auto;
         align-items: center;
@@ -601,10 +606,10 @@ label {
         border-top: 0.5px solid #212529;
         background-color: var(--dark-color);
     }
-    .desktop-nav-container nav {
+    .nav-container nav {
         display: flex;
     }
-    .desktop-nav-container nav ul {
+    .nav-container nav ul {
         width: 100vw;
         display: flex;
         align-items: center;
@@ -613,11 +618,11 @@ label {
         padding: 0;
         list-style: none;
     }
-    .desktop-nav-container nav li {
+    .nav-container nav li {
         margin: 1em;
     }
-    .desktop-nav-container nav a {
-        font-size: 0.8rem;
+    .nav-container nav a {
+        font-size: 2vw;
         color: white;
         text-decoration: none;
         text-transform: uppercase;
@@ -650,7 +655,7 @@ label {
         margin-top: 0.3em;
     }
     label {
-        font-size: 13vw;
+        font-size: 8vw;
     }
     .red-divider {
         width: 10vw;
@@ -682,7 +687,7 @@ label {
     .about-me {
         justify-content: center;
         align-items: center;
-        padding-bottom: 5vh;
+        padding-top: 5vh;
     }
     .about-me > .container {
         display: flex;
@@ -731,7 +736,7 @@ label {
         height: auto;
         display: flex;
         flex-direction: column;
-        padding-bottom: 5vh;
+        padding-top: 5vh;
     }
     .technical-skills > .container {
         display: flex;
@@ -748,7 +753,7 @@ label {
         flex-direction: column;
     }
     .list-container > .platforms-label {
-        font-size: 5vw;
+        font-size: 4.5vw;
     }
     .tech-platforms-container > .list-container > .divider-container {
         display: none;
@@ -757,9 +762,9 @@ label {
         margin-left: 0;
     }
     .tech-stack-container > .tech-stack {
-        font-size: 3vw;
+        font-size: 2vw;
         margin: 0.8vw;
-        padding: 2vw 2.5vw 2vw 2.5vw;
+        padding: 2vw 2.8vw 2vw 2.8vw;
         border-radius: 0.5vw;
     }
     .margin {
@@ -768,7 +773,7 @@ label {
     .projects {
         justify-content: center;
         align-items: center;
-        padding-bottom: 5vh;
+        padding-top: 5vh;
     }
     .projects > .container {
         display: flex;
@@ -795,10 +800,11 @@ label {
     }
     .projects > .list-container > .projects-item > .title-container {
         height: 5vh;
-        margin: 1.8em;
+        margin-top: 10vw;
+        margin-left: 6vw;
     }
     .projects > .list-container > .projects-item > .title-container > .title {
-        font-size: 6vw;
+        font-size: 5vw;
     }
     .projects > .list-container > .projects-item > .thumbnail-container > #thumbnail {
         width: 90%;
@@ -860,7 +866,7 @@ label {
     .blogs {
         justify-content: center;
         align-items: center;
-        padding-bottom: 5vh;
+        padding-top: 5vh;
     }
     .blogs > .container {
         display: flex;
@@ -904,13 +910,13 @@ label {
         border: 1.5px solid #FFFFFF;
     }
     .footer {
-        height: 70vh;
+        height: 100vh;
     }
     .footer > .container {
         height: 60vh;
     }
     .footer > .container > .follow-me {
-        font-size: 15vw;
+        font-size: 10vw;
     }
     .footer > .container > .social-media {
         height: 10vw;
@@ -936,6 +942,6 @@ label {
         justify-content: center;
     }
     .footer > .copyrights > p {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
 }

@@ -34,13 +34,13 @@ function selectMenu(menu) {
 	 activateMenu = menu;
 }
 
-let navContainer = document.querySelector('.desktop-nav-container');
+let navContainer = document.querySelector('.nav-container');
 let nav = document.createElement('nav');
 let ul = document.createElement('ul');
 for(let i=0; i<menu.length; i++) {
 	let li = document.createElement('li');
 	let a = document.createElement('a');
-	a.href = menu[i].path;
+	a.href = window.location.origin +'/'+ menu[i].path;
 	a.innerText = menu[i].label;
 	a.setAttribute('id', menu[i].label);
 	a.addEventListener('click', function () {
