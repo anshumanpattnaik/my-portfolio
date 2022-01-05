@@ -129,16 +129,10 @@ label {
     font-size: 3vw;
     color: #FFFFFF;
 }
-.introduction > .container > .i-am {
+.introduction > .container > .full-name {
     font-family: SpartanBold, serif;
     font-size: 4vw;
     color: #FFF;
-    margin-top: 1vw;
-}
-.introduction > .container > .i-am > .name {
-    font-family: SpartanBold, serif;
-    font-size: 4vw;
-    color: white;
     margin-top: 1vw;
 }
 .introduction > .container > .designation {
@@ -630,32 +624,6 @@ label {
         text-transform: uppercase;
         transition: .3s;
     }
-    .introduction {
-        align-items: center;
-        margin-left: 0;
-    }
-    .introduction > .text-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0;
-    }
-    .introduction > .text-container > .hello {
-        font-size: 10vw;
-    }
-    .introduction > .text-container > .i-am {
-        font-size: 12vw;
-        margin-top: 0.2em;
-    }
-    .introduction > .text-container > .i-am > .name {
-        font-size: 12vw;
-        margin-top: 0.2em;
-    }
-    .introduction > .text-container > .designation {
-        font-size: 7vw;
-        margin-top: 0.3em;
-    }
     label {
         font-size: 8vw;
     }
@@ -664,26 +632,55 @@ label {
         height: 0.2em;
         margin-top: 1em;
     }
-    .introduction > .social-media-container {
-        margin-top: 3em;
+    .introduction {
+        height: 100vh;
+        align-items: center;
         margin-left: 0;
     }
-    .introduction > .social-media-container > img {
-        width: 7vw;
+    .introduction > .background {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
     }
-    .introduction > .social-media-container > img:nth-child(n+2) {
+    .introduction > .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+    }
+    .introduction > .container > .hello {
+        font-size: 8vw;
+    }
+    .introduction > .container > .full-name {
+        font-size: 7vw;
+        margin-top: 4vw;
+    }
+    .introduction > .container > .designation {
+        font-size: 4vw;
+        margin-top: 5vw;
+    }
+    .introduction > .container > .social-media-container {
+        margin-top: 5vw;
+        margin-left: 0;
+    }
+    .introduction > .container > .social-media-container > img {
+        width: 6vw;
+    }
+    .introduction > .container > .social-media-container > img:nth-child(n+2) {
         margin-left: 2.5em;
     }
-    .introduction > .button-container {
+    .introduction > .container > .button-container {
         width: 100vw;
         justify-content: center;
-        margin-top: 3em;
+        margin-top: 13vw;
         margin-left: 0;
     }
-    .introduction > .button-container > .projects-btn {
-        width: 60vw;
-        height: 15vw;
-        font-size: 3.5vw;
+    .introduction > .container > .button-container > .projects-btn {
+        width: 45vw;
+        height: 13vw;
+        font-size: 2.8vw;
         border-radius: 0.1em;
     }
     .about-me {
