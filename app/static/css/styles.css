@@ -94,43 +94,6 @@ header {
     cursor: pointer;
     color: var(--red);
 }
-.introduction {
-    width: 100vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.introduction > .background {
-    width: 100vw;
-}
-.introduction > .text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 4em;
-    z-index: 999;
-}
-.introduction > .text-container > .hello {
-    font-family: BebasNeueRegular, serif;
-    font-size: 2.5vw;
-    color: #FFFFFF;
-}
-.introduction > .text-container > .i-am {
-    font-family: BebasNeueRegular, serif;
-    font-size: 7vw;
-    color: #FFF;
-}
-.introduction > .text-container > .i-am > .name {
-    font-family: BebasNeueRegular, serif;
-    font-size: 7vw;
-    color: var(--red);
-}
-.introduction > .text-container > .designation {
-    font-family: BebasNeueRegular, serif;
-    font-size: 2vw;
-    color: #FFFFFF;
-}
 label {
     font-family: SpartanBold, serif;
     font-size: 2vw;
@@ -143,44 +106,83 @@ label {
     margin-top: 0.5em;
     background-color: var(--red);
 }
-.introduction > .social-media-container {
+.introduction {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.introduction > .background {
+    width: 100vw;
+}
+.introduction > .container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.introduction > .container > .hello {
+    font-family: SpartanBold, serif;
+    font-size: 3vw;
+    color: #FFFFFF;
+}
+.introduction > .container > .i-am {
+    font-family: SpartanBold, serif;
+    font-size: 4vw;
+    color: #FFF;
+    margin-top: 1vw;
+}
+.introduction > .container > .i-am > .name {
+    font-family: SpartanBold, serif;
+    font-size: 4vw;
+    color: white;
+    margin-top: 1vw;
+}
+.introduction > .container > .designation {
+    font-family: SpartanBold, serif;
+    font-size: 1.2vw;
+    color: #FFFFFF;
+    margin-top: 1.5vw;
+}
+.introduction > .container > .social-media-container {
     display: flex;
     align-items: flex-end;
-    margin-top: 1.5em;
-    margin-left: 4em;
-    z-index: 999;
+    margin-top: 2vw;
 }
-.introduction > .social-media-container > img {
+.introduction > .container > .social-media-container > img {
     width: 1.5vw;
     cursor: pointer;
 }
-.introduction > .social-media-container > img:nth-child(n+2) {
+.introduction > .container > .social-media-container > img:nth-child(n+2) {
     margin-left: 2.5em;
 }
-.introduction > .button-container {
+.introduction > .container > .button-container {
     width: 40vw;
     /*height: 5em;*/
     display: flex;
-    margin-top: 3em;
-    margin-left: 4em;
-    z-index: 999;
-    /*background-color: aquamarine;*/
+    justify-content: center;
+    margin-top: 3vw;
 }
-.introduction > .button-container > .projects-btn {
-    width: 12vw;
+.introduction > .container > .button-container > .projects-btn {
+    width: 11vw;
     height: 6vh;
-    font-family: PoppinsBold, serif;
-    font-size: 0.75vw;
+    font-family: SpartanBold, serif;
+    font-size: 0.7vw;
     color: #FFFFFF;
     text-transform: uppercase;
-    border: none;
     border-radius: 0.1em;
     transition: .3s;
-    background-color: var(--red);
+    border: 2.2px solid #FFFFFF;
+    background: transparent;
 }
-.introduction > .button-container > .projects-btn:hover {
+.introduction > .container > .button-container > .projects-btn:hover {
     cursor: pointer;
-    background-color: var(--light-red);
+    color: #000000;
+    border: 2.2px solid yellow;
+    background-color: yellow;
 }
 .intro-section > .x-marker {
     font-family: PoppinsBold, serif;
