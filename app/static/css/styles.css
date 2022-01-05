@@ -686,6 +686,7 @@ label {
         border-radius: 0.1em;
     }
     .about-me {
+        height: auto;
         justify-content: center;
         align-items: center;
         padding-top: 5vh;
