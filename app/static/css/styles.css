@@ -115,6 +115,8 @@ label {
 }
 .introduction > .background {
     width: 100vw;
+    height: 100vh;
+    object-fit: cover;
 }
 .introduction > .container {
     width: 100vw;
@@ -192,7 +194,7 @@ label {
 }
 .about-me {
     width: 100vw;
-    height: auto;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     padding-top: 6vh;
@@ -258,7 +260,7 @@ label {
 }
 .technical-skills {
     width: 100vw;
-    height: auto;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     padding-top: 6vh;
@@ -618,7 +620,7 @@ label {
         margin: 1em;
     }
     .nav-container nav a {
-        font-size: 2vw;
+        font-size: 1.9vw;
         color: white;
         text-decoration: none;
         text-transform: uppercase;
