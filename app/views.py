@@ -6,7 +6,7 @@ from app.core.clients.DBClient import DBClient
 
 def index(request):
     with DBClient() as db_client:
-        tech_platforms = db_client.fetch_tech_platforms()
+        tech_platforms = db_client.fetch_tech_platforms().order_by('id')
         tech_skills = []
         for _index, platform in enumerate(tech_platforms, start=1):
             tech_stack = db_client.fetch_tech_stack_by_domain_id(_index)

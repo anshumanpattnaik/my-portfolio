@@ -33,6 +33,7 @@
     --red: #f42735;
     --light-red: #af0614;
     --background: #1a1b1d;
+    --animation-duration: 2s;
 }
 html, body {
     margin: 0;
@@ -128,25 +129,51 @@ label {
 }
 .introduction > .container > .hello {
     font-family: SpartanBold, serif;
-    font-size: 3vw;
+    font-size: 3.5vw;
     color: #FFFFFF;
+    position: relative;
+    animation: top;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 .introduction > .container > .full-name {
     font-family: SpartanBold, serif;
-    font-size: 4vw;
-    color: #FFF;
+    font-size: 3.5vw;
+    color: #FFFFFF;
+    position: relative;
+    animation: top;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
     margin-top: 1vw;
 }
 .introduction > .container > .designation {
     font-family: SpartanBold, serif;
     font-size: 1.2vw;
     color: #FFFFFF;
+    position: relative;
+    animation: top;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
     margin-top: 1.5vw;
+}
+.introduction > .container > .red-divider {
+    width: 2vw;
+    height: 0.2em;
+    margin-top: 0.5em;
+    position: relative;
+    animation: top;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    background-color: var(--red);
 }
 .introduction > .container > .social-media-container {
     display: flex;
     align-items: flex-end;
     margin-top: 2vw;
+    position: relative;
+    animation: top;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 .introduction > .container > .social-media-container > img {
     width: 1.5vw;
@@ -161,6 +188,10 @@ label {
     display: flex;
     justify-content: center;
     margin-top: 3vw;
+    position: relative;
+    animation: top;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 .introduction > .container > .button-container > .projects-btn {
     width: 11vw;
@@ -194,7 +225,7 @@ label {
 }
 .about-me {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding-top: 6vh;
@@ -248,7 +279,7 @@ label {
     font-family: SpartanBold, serif;
     font-size: 0.65vw;
     color: #FFFFFF;
-    margin-top: 2em;
+    margin-top: 3vw;
     transition: .3s;
     border: 2.2px solid #FFFFFF;
     background: transparent;
@@ -260,7 +291,7 @@ label {
 }
 .technical-skills {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding-top: 6vh;
@@ -368,6 +399,7 @@ label {
     font-family: SpartanBold, serif;
     font-size: 1.3vw;
     color: #FFF;
+    line-height: 2vw;
 }
 .projects-item > .thumbnail-container {
     min-height: 15vw;
@@ -663,6 +695,9 @@ label {
         font-size: 4vw;
         margin-top: 5vw;
     }
+    .introduction > .container > .red-divider {
+        width: 10vw;
+    }
     .introduction > .container > .social-media-container {
         margin-top: 5vw;
         margin-left: 0;
@@ -802,11 +837,12 @@ label {
     }
     .projects > .list-container > .projects-item > .title-container {
         height: 5vh;
-        margin-top: 10vw;
+        margin-top: 8vw;
         margin-left: 6vw;
     }
     .projects > .list-container > .projects-item > .title-container > .title {
         font-size: 5vw;
+        line-height: 8vw;
     }
     .projects > .list-container > .projects-item > .thumbnail-container > #thumbnail {
         width: 90%;
@@ -946,4 +982,20 @@ label {
     .footer > .copyrights > p {
         font-size: 2.5vw;
     }
+}
+@keyframes top {
+  0% {top: -100px}
+  100% {top: 0}
+}
+@keyframes left {
+  0% {left: -100px;}
+  100% {left: 0}
+}
+@keyframes right {
+  0% {right: -100px;}
+  100% {right: 0}
+}
+@keyframes bottom {
+  0% {bottom: -100px}
+  100% {bottom: 0}
 }
