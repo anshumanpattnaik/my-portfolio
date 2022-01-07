@@ -1,0 +1,37 @@
+{% load static %}
+
+<div class="projects-item" style="background-color: {{ project.color_code }}">
+    <div class="title-container">
+        <span class="title">{{ project.title }}</span>
+    </div>
+    <div class="thumbnail-container">
+        <img src="{{ project.small_thumbnail }}" class="preview" id="thumbnail" loading="lazy" alt="image"/>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="tech-stack">
+                {% for tech_stack in project.tech_stack %}
+                    <span class="label">{{ tech_stack }}</span>
+                {% endfor %}
+            </div>
+            <div class="white-divider"></div>
+            <div class="project-source">
+                {% if project.project_link %}
+                    <a href="{{ project.project_link }}" class="link" target="_blank">
+                        <img src="{% static 'images/link.png' %}" alt="Link" title="Link"/>
+                    </a>
+                {% endif %}
+                {% if project.youtube_link %}
+                    <a href="{{ project.youtube_link }}" class="youtube" target="_blank">
+                        <img src="{% static 'images/youtube_btn.png' %}" alt="YouTube" title="YouTube"/>
+                    </a>
+                {% endif %}
+                {% if project.github_link %}
+                    <a href="{{ project.github_link }}" class="github" target="_blank">
+                        <img src="{% static 'images/github_btn.png' %}" alt="GitHub" title="GitHub"/>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+{% load static %}
+
+<section class="footer">
+    <div class="container">
+        <span class="follow-me">Follow Me</span>
+        <div class="red-divider"></div>
+        <div class="social-media">
+            <img src="{% static 'images/github.png' %}" alt="GitHub" title="GitHub"
+                 onclick="window.open('{{ profile.github }}', '_blank')"/>
+            <img src="{% static 'images/facebook.png' %}" alt="Facebook" title="Facebook"
+                 onclick="window.open('{{ profile.facebook }}', '_blank')"/>
+            <img src="{% static 'images/twitter.png' %}" alt="Twitter" title="Twitter"
+                 onclick="window.open('{{ profile.twitter }}', '_blank')"/>
+            <img src="{% static 'images/linkedin.png' %}" alt="Linkedin" title="Linkedin"
+                 onclick="window.open('{{ profile.linkedin }}', '_blank')"/>
+            <img src="{% static 'images/instagram.png' %}" alt="Instagram" title="Instagram"
+                 onclick="window.open('{{ profile.instagram }}', '_blank')"/>
+        </div>
+        <p class="email">{{ profile.email }}</p>
+    </div>
+    <div class="copyrights">
+        <p>{{ profile.copyright }}</p>
+    </div>
+</section>
+<script src="{% static 'js/main.js' %}"></script>

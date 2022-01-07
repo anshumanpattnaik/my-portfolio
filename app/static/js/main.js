@@ -1,53 +1,49 @@
 let menu = [{
-		"label": "Home",
-		"path": "#home",
-		"selected": false
-	},
-	{
-		"label": "Technical Skills",
-		"path": "#technical-skills",
-		"selected": false
-	},
-	{
-		"label": "Projects",
-		"path": "#projects",
-		"selected": false
-	},
-	{
-		"label": "Blogs",
-		"path": "#blogs",
-		"selected": false
-	},
-	{
-		"label": "About Me",
-		"path": "#about-me",
-		"selected": false
-	}
+        "label": "Home",
+        "path": "home"
+    },
+    {
+        "label": "Technical Skills",
+        "path": "technical-skills"
+    },
+    {
+        "label": "Projects",
+        "path": "projects"
+    },
+    {
+        "label": "Blogs",
+        "path": "blogs"
+    },
+    {
+        "label": "About Me",
+        "path": "about-me"
+    }
 ]
-
-let activateMenu;
-function selectMenu(menu) {
-	 document.getElementById(menu).style.color = "#f42735";
-	 if(activateMenu != null) {
-	   document.getElementById(activateMenu).style.color = "#fff";
-	 }
-	 activateMenu = menu;
-}
 
 let navContainer = document.querySelector('.nav-container');
 let nav = document.createElement('nav');
 let ul = document.createElement('ul');
-for(let i=0; i<menu.length; i++) {
-	let li = document.createElement('li');
-	let a = document.createElement('a');
-	a.href = window.location.origin +'/'+ menu[i].path;
-	a.innerText = menu[i].label;
-	a.setAttribute('id', menu[i].label);
-	a.addEventListener('click', function () {
-		selectMenu(menu[i].label);
-	});
-	li.append(a);
-	ul.append(li);
+for (let i = 0; i < menu.length; i++) {
+    let li = document.createElement('li');
+    let a = document.createElement('a');
+    let label = menu[i].label;
+    let path = menu[i].path;
+
+    a.href = window.location.origin + '/#' + path;
+    a.innerText = label;
+    a.addEventListener('click', function () {
+        let sections = document.querySelectorAll("section[id]");
+        sections.forEach(section => {
+            let section_id = section.getAttribute("id");
+            if (section_id === path) {
+                document.querySelector(".nav-container a[href*=" + section_id + "]").style.color = '#f42735';
+            } else {
+                document.querySelector(".nav-container a[href*=" + section_id + "]").style.color = '#ffffff';
+            }
+        });
+    });
+    li.append(a);
+    ul.append(li);
 }
 nav.append(ul);
 navContainer.append(nav);
