@@ -28,17 +28,17 @@ for (let i = 0; i < menu.length; i++) {
     let a = document.createElement('a');
     let label = menu[i].label;
     let path = menu[i].path;
-
     a.href = window.location.origin + '/#' + path;
     a.innerText = label;
     a.addEventListener('click', function () {
         let sections = document.querySelectorAll("section[id]");
         sections.forEach(section => {
             let section_id = section.getAttribute("id");
+            let item = document.querySelector(".nav-container a[href*=" + section_id + "]");
             if (section_id === path) {
-                document.querySelector(".nav-container a[href*=" + section_id + "]").style.color = '#f42735';
+                item.style.color = '#f42735';
             } else {
-                document.querySelector(".nav-container a[href*=" + section_id + "]").style.color = '#ffffff';
+                item.style.color = '#ffffff';
             }
         });
     });

@@ -1,20 +1,4 @@
 @font-face {
-    font-family: PoppinsRegular;
-    src: url(../font/Poppins-Regular.ttf);
-}
-@font-face {
-    font-family: PoppinsBold;
-    src: url(../font/Poppins-Bold.ttf);
-}
-@font-face {
-    font-family: BebasNeueRegular;
-    src: url(../font/BebasNeue-Regular.ttf);
-}
-@font-face {
-    font-family: BakbakOneRegular;
-    src: url(../font/BakbakOne-Regular.ttf);
-}
-@font-face {
     font-family: RighteousRegular;
     src: url(../font/Righteous-Regular.ttf);
 }
@@ -39,7 +23,6 @@ html, body {
     margin: 0;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    /*background-color: var(--background);*/
 }
 header {
     width: 100vw;
@@ -48,7 +31,6 @@ header {
     align-items: center;
     position: fixed;
     z-index: 9999;
-    /*border-bottom: 0.5px solid var(--dark-color);*/
     opacity: 0.95;
     background: #121212;
 }
@@ -184,7 +166,6 @@ label {
 }
 .introduction > .container > .button-container {
     width: 40vw;
-    /*height: 5em;*/
     display: flex;
     justify-content: center;
     margin-top: 3vw;
@@ -210,18 +191,6 @@ label {
     color: #000000;
     border: 2.2px solid yellow;
     background-color: yellow;
-}
-.intro-section > .x-marker {
-    font-family: PoppinsBold, serif;
-    font-size: 33vw;
-    color: #131717;
-    left: 30px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
 }
 .about-me {
     width: 100vw;
@@ -592,7 +561,6 @@ label {
     align-items: center;
     justify-content: center;
     margin-top: 1.5vw;
-    /*background-color: #f42735;*/
 }
 .footer > .container > .social-media > img {
     width: 2vw;
