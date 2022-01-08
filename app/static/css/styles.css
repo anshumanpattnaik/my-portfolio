@@ -23,6 +23,7 @@ html, body {
     margin: 0;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background-color: #000000;
 }
 header {
     width: 100vw;

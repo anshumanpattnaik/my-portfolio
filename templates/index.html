@@ -3,7 +3,7 @@
 
 {% block content %}
     <section class="introduction" id="home">
-        <img src="{% static 'images/cartoonize.png' %}" class="background" alt=""/>
+        <img src="{% static 'images/cartoonize.png' %}" class="background" loading="lazy" alt=""/>
         <div class="container">
             <span class="hello">Hello,</span>
             <span class="full-name">I'm {{ profile.full_name }}</span>
@@ -41,7 +41,7 @@
             </div>
         </div>
     </section>
-    <section class="technical-skills" id="technical-skills">
+    <section class="technical-skills" id="tech-skills">
         <div class="container">
             <label>Technical Skills</label>
             <div class="red-divider"></div>

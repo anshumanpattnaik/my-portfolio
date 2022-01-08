@@ -3,8 +3,8 @@ let menu = [{
         "path": "home"
     },
     {
-        "label": "Technical Skills",
-        "path": "technical-skills"
+        "label": "Tech Skills",
+        "path": "tech-skills"
     },
     {
         "label": "Projects",
@@ -23,11 +23,17 @@ let menu = [{
 let navContainer = document.querySelector('.nav-container');
 let nav = document.createElement('nav');
 let ul = document.createElement('ul');
+
 for (let i = 0; i < menu.length; i++) {
     let li = document.createElement('li');
     let a = document.createElement('a');
     let label = menu[i].label;
     let path = menu[i].path;
+    let url = new URL(window.location.href);
+
+    if(url.hash.includes(path)) {
+        a.style.color = '#f42735';
+    }
     a.href = window.location.origin + '/#' + path;
     a.innerText = label;
     a.addEventListener('click', function () {
