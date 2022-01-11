@@ -22,10 +22,6 @@ services:
     env_file:
       - ./.env
   nginx:
-    build:
-      context: ./nginx
-      cache_from:
-        - "${NGINX_IMAGE}"
     image: "${NGINX_IMAGE}"
     volumes:
       - static_volume:/home/app/web/staticfiles
