@@ -13,3 +13,6 @@ jobs:
       - name: Add environment variables to .env
         run: |
           echo DEBUG=0 >> .env
+          echo DATABASE_ENGINE=django.db.backends.postgresql >> .env
+          echo DATABASE=postgres >> .env
+          echo DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }} >> .env
