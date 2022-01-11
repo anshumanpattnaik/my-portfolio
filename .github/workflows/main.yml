@@ -83,5 +83,5 @@ jobs:
             docker login ghcr.io -u $NAMESPACE -p $PERSONAL_ACCESS_TOKEN
             docker pull $WEB_IMAGE
             docker pull $NGINX_IMAGE
-            docker-compose -f docker-compose.prod.yml up -d
+            docker-compose -f docker-compose.yml up -d
           ENDSSH
