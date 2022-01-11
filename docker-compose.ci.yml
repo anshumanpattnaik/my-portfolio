@@ -2,6 +2,11 @@ version: '3.8'
 
 services:
   web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      cache_from:
+        - "${WEB_IMAGE}"
     image: "${WEB_IMAGE}"
     command: gunicorn portfolio.wsgi:application --bind 0.0.0.0:8000
     volumes:
@@ -18,6 +23,10 @@ services:
     env_file:
       - .env
   nginx:
+    build:
+      context: ./nginx
+      cache_from:
+        - "${NGINX_IMAGE}"
     image: "${NGINX_IMAGE}"
     volumes:
       - static_volume:/home/app/web/staticfiles
