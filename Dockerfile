@@ -25,9 +25,9 @@ RUN chown -R app:app $APP_HOME
 
 # Install dependencies
 RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev
-RUN pip3 install --upgrade pip
-RUN pip3 install wheel
-RUN pip3 install -r requirements.txt
+RUN pip install --upgrade pip
+RUN pip install wheel
+RUN pip install -r requirements.txt
 
 RUN sed -i 's/\r$//g' $APP_HOME/entrypoint.sh
 RUN chmod +x $APP_HOME/entrypoint.sh
