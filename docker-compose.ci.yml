@@ -17,7 +17,11 @@ services:
     depends_on:
       - db
   db:
-    image: postgres:13.0-alpine
+    build:
+      context: ./db
+      cache_from:
+        - "${DB_IMAGE}"
+    image: "${DB_IMAGE}"
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     env_file:
