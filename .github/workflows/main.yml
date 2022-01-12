@@ -1,9 +1,9 @@
 name: Continuous Integration and Delivery
 on: [push]
 env:
-  WEB_IMAGE: ghcr.io/$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')/web
   DB_IMAGE: ghcr.io/$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')/db
   NGINX_IMAGE: ghcr.io/$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')/nginx
+  WEB_IMAGE: ghcr.io/$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')/web
 jobs:
   build:
     name: Build Docker Images
@@ -25,9 +25,9 @@ jobs:
           echo DATABASE_PORT=${{ secrets.DATABASE_PORT }} >> .env
       - name: Set environment variables
         run: |
-          echo "WEB_IMAGE=$(echo ${{env.WEB_IMAGE}})" >> $GITHUB_ENV
           echo "DB_IMAGE=$(echo ${{env.DB_IMAGE}})" >> $GITHUB_ENV
           echo "NGINX_IMAGE=$(echo ${{env.NGINX_IMAGE}})" >> $GITHUB_ENV
+          echo "WEB_IMAGE=$(echo ${{env.WEB_IMAGE}})" >> $GITHUB_ENV
       - name: Log in to Github Packages
         run: >-
           echo ${PERSONAL_ACCESS_TOKEN} | docker login ghcr.io -u ${{ secrets.NAMESPACE }} --password-stdin
@@ -35,17 +35,17 @@ jobs:
           PERSONAL_ACCESS_TOKEN: '${{ secrets.PERSONAL_ACCESS_TOKEN }}'
       - name: Pull Docker images
         run: |
-          docker pull ${{ env.WEB_IMAGE }} || true
           docker pull ${{ env.DB_IMAGE }} || true
           docker pull ${{ env.NGINX_IMAGE }} || true
+          docker pull ${{ env.WEB_IMAGE }} || true
       - name: Build images
         run: |
           docker-compose -f docker-compose.ci.yml build
       - name: Push images
         run: |
-          docker push ${{ env.WEB_IMAGE }}
           docker push ${{ env.DB_IMAGE }}
           docker push ${{ env.NGINX_IMAGE }}
+          docker push ${{ env.WEB_IMAGE }}
 
   deploy:
     name: Deploy
@@ -66,9 +66,9 @@ jobs:
           echo DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }} >> .env
           echo DATABASE_HOST=${{ secrets.DATABASE_HOST }} >> .env
           echo DATABASE_PORT=${{ secrets.DATABASE_PORT }} >> .env
-          echo WEB_IMAGE=${{ env.WEB_IMAGE }} >> .env
           echo DB_IMAGE=${{ env.DB_IMAGE }} >> .env
           echo NGINX_IMAGE=${{ env.NGINX_IMAGE }} >> .env
+          echo WEB_IMAGE=${{ env.WEB_IMAGE }} >> .env
           echo NAMESPACE=${{ secrets.NAMESPACE }} >> .env
           echo PERSONAL_ACCESS_TOKEN=${{ secrets.PERSONAL_ACCESS_TOKEN }} >> .env
       - name: ssh-agent
@@ -88,8 +88,8 @@ jobs:
             cd /anshuman.me
             source .env
             docker login ghcr.io -u $NAMESPACE -p $PERSONAL_ACCESS_TOKEN
-            docker pull $WEB_IMAGE
             docker pull $DB_IMAGE
             docker pull $NGINX_IMAGE
+            docker pull $WEB_IMAGE
             docker-compose -f docker-compose.yml up -d
           ENDSSH

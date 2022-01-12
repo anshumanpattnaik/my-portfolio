@@ -1,6 +1,15 @@
 version: '3.8'
 
 services:
+  db:
+    build:
+      context: ./db
+      cache_from:
+        - "${DB_IMAGE}"
+    image: "${DB_IMAGE}"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file: .env
   web:
     build:
       context: .
@@ -18,16 +27,6 @@ services:
       - db
     links:
       - db:db
-  db:
-    build:
-      context: ./db
-      cache_from:
-        - "${DB_IMAGE}"
-    image: "${DB_IMAGE}"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
-    env_file:
-      - .env
   nginx:
     build:
       context: ./nginx
