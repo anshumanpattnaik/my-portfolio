@@ -38,7 +38,7 @@ jobs:
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: |
-          scp  -o StrictHostKeyChecking=no -r ./.env ./portfolio root@${{ secrets.VPS_IP_ADDRESS }}:/anshuman.me
+          scp  -o StrictHostKeyChecking=no -r ./.env ./ root@${{ secrets.VPS_IP_ADDRESS }}:/anshuman.me
           ssh -o StrictHostKeyChecking=no root@${{ secrets.VPS_IP_ADDRESS }} << 'ENDSSH'
             cd /anshuman.me
             source .env
