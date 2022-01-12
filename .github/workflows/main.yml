@@ -2,6 +2,7 @@ name: Continuous Integration and Delivery
 on: [push]
 env:
   WEB_IMAGE: ghcr.io/$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')/web
+  DB_IMAGE: ghcr.io/$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')/db
   NGINX_IMAGE: ghcr.io/$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')/nginx
 jobs:
   build:
@@ -25,6 +26,7 @@ jobs:
       - name: Set environment variables
         run: |
           echo "WEB_IMAGE=$(echo ${{env.WEB_IMAGE}})" >> $GITHUB_ENV
+          echo "DB_IMAGE=$(echo ${{env.DB_IMAGE}})" >> $GITHUB_ENV
           echo "NGINX_IMAGE=$(echo ${{env.NGINX_IMAGE}})" >> $GITHUB_ENV
       - name: Log in to Github Packages
         run: >-
@@ -34,6 +36,7 @@ jobs:
       - name: Pull Docker images
         run: |
           docker pull ${{ env.WEB_IMAGE }} || true
+          docker pull ${{ env.DB_IMAGE }} || true
           docker pull ${{ env.NGINX_IMAGE }} || true
       - name: Build images
         run: |
@@ -41,6 +44,7 @@ jobs:
       - name: Push images
         run: |
           docker push ${{ env.WEB_IMAGE }}
+          docker push ${{ env.DB_IMAGE }}
           docker push ${{ env.NGINX_IMAGE }}
 
   deploy:
@@ -84,6 +88,7 @@ jobs:
             source .env
             docker login ghcr.io -u $NAMESPACE -p $PERSONAL_ACCESS_TOKEN
             docker pull $WEB_IMAGE
+            docker pull $DB_IMAGE
             docker pull $NGINX_IMAGE
             docker-compose -f docker-compose.yml up -d
           ENDSSH
