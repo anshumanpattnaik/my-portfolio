@@ -1,7 +1,7 @@
 name: Continuous Integration and Delivery
 on: [push]
 env:
-  DB_IMAGE: ghcr.io/$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')/db
+  DB_IMAGE: ghcr.io/$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')/data
 jobs:
   build:
     name: Build Docker Images
