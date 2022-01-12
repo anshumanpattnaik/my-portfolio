@@ -2,11 +2,7 @@ version: '3.8'
 
 services:
   db:
-    build:
-      context: ./db
-      cache_from:
-        - "${DB_IMAGE}"
-    image: "${DB_IMAGE}"
+    image: postgres:13.0-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     env_file: .env
