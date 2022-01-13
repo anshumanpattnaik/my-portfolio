@@ -12,6 +12,13 @@ User = get_user_model()
 User.objects.create_superuser(os.environ.get('DATABASE_USER'), os.environ.get('ADMIN_EMAIL'),
                               os.environ.get('DATABASE_PASSWORD'))
 
+# Delete all records
+Blog.objects.all().delete()
+Profile.objects.all().delete()
+Project.objects.all().delete()
+TechPlatform.objects.all().delete()
+TechStack.objects.all().delete()
+
 # Blogs Data
 blogs = json.load(open('database/Blog.json'))
 for blog in blogs:
