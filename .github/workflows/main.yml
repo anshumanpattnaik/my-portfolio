@@ -38,7 +38,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no root@${{ secrets.VPS_IP_ADDRESS }} << 'ENDSSH'
             cd /opt/anshuman.me/my-portfolio
             rm -rf venv
-            git pull origin master --force
+            git pull origin main --force
             python3 -m venv venv
             source ./venv/bin/activate
             pip3 install --upgrade pip
