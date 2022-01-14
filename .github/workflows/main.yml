@@ -4,7 +4,7 @@ jobs:
   build:
     name: Build & Deploy
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout master
         uses: actions/checkout@v1
