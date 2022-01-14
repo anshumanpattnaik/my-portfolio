@@ -6,10 +6,10 @@ NAME="anshuman.me"
 # Django project directory
 DJANGODIR=/opt/anshuman.me/my-portfolio
 
-# Virual Env directory
+# Virtual Env directory
 VIRTUAL_ENV=$DJANGODIR/venv
 
-# we will communicte using this unix socket
+# we will communicate using this unix socket
 SOCKFILE=$DJANGODIR/run/gunicorn.sock
 
 # the user to run as
