@@ -11,6 +11,7 @@ jobs:
       - name: Add environment variables to .env
         run: |
           echo DEBUG=${{ secrets.DEBUG }} >> .env
+          echo ADMIN_INTERNAL_URL=${{ secrets.ADMIN_INTERNAL_URL }} >> .env
           echo DATABASE_ENGINE=django.db.backends.postgresql >> .env
           echo DATABASE=postgres >> .env
           echo DJANGO_SECRET_KEY="${{ secrets.DJANGO_SECRET_KEY }}" >> .env
