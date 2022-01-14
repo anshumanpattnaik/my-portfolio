@@ -16,7 +16,9 @@
             <img src="{% static 'images/instagram.png' %}" alt="Instagram" title="Instagram"
                  onclick="window.open('{{ profile.instagram }}', '_blank')"/>
         </div>
-        <p class="email">{{ profile.email }}</p>
+        <p>
+            <a href="mailto:{{ profile.email }}" class="email">{{ profile.email }}</a>
+        </p>
     </div>
     <div class="copyrights">
         <p>{{ profile.copyright }}</p>
