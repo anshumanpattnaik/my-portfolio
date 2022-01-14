@@ -575,6 +575,7 @@ label {
     color: var(--red);
     text-decoration: none;
     transition: .3s;
+    margin-top: 5vw;
 }
 .footer > .container > p > .email:hover {
     cursor: pointer;
@@ -946,7 +947,7 @@ label {
     }
     .footer > .container > p > .email {
         font-size: 4vw;
-        margin-top: 10vw;
+        margin-top: 15vw;
     }
     .footer > .copyrights {
         height: 10vh;
