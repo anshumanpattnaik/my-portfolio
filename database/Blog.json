@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "HTTP Request Smuggling Detection Tool",
+        "thumbnail": "https://assets.hackbotone.com/assets/http-request-smuggling-detection-tool/small_thumbnail.png",
+        "link": "https://hackbotone.com/blog/http-request-smuggling-detection-tool/",
+        "published_date": "2022-01-01 16:43:42",
+        "last_updated_date": "2022-01-01 16:43:42"
+    },
+    {
+        "id": 2,
+        "title": "Why I switched to Django over any other framework?",
+        "thumbnail": "https://assets.hackbotone.com/assets/why-i-switched-to-django-over-any-other-framework/small_thumbnail.png",
+        "link": "https://hackbotone.com/blog/why-i-switched-to-django-over-any-other-framework/",
+        "published_date": "2022-01-01 16:45:35",
+        "last_updated_date": "2022-01-01 16:45:35"
+    },
+    {
+        "id": 3,
+        "title": "Essential RECON Tools",
+        "thumbnail": "https://assets.hackbotone.com/assets/essential-recon-tools/small_thumbnail.png",
+        "link": "https://hackbotone.com/blog/essential-recon-tools/",
+        "published_date": "2022-01-01 16:46:12",
+        "last_updated_date": "2022-01-01 16:46:12"
+    }
+]

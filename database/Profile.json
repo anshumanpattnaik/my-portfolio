@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "full_name": "Anshuman Pattnaik",
+        "photo": "https://assets.hackbotone.com/assets/myportfolio/anshuman_pattnaik.jpg",
+        "email": "hello@anshuman.me",
+        "designation": "Software Developer",
+        "about_me": "<span class=\"text-content\">\r\n    I am a software developer with 8+ years of experience and worked on various core technology like \r\n    (Android Application Development, MERN Stack development, Fullstack Web development using Django and many more). \r\n    And in recent years, I have started pursuing my interest in application security because after having a solid \r\n    background in software development, I need to understand the security flaws in the application and follow the \r\n    best coding practices to secure the platforms. And currently, I am doing research in API Security testing to \r\n    find a vulnerability in a microservices platform and learning new tools & techniques to understand web security \r\n    exploitation in-depth.\r\n</span>\r\n<p class=\"text-content\">\r\n    To share my work with the community, I have also developed a blogging platform known as \r\n    <a href=\"https://hackbotone.com\" class=\"hackbotone\" target=\"_blank\">HackbotOne</a>. And in this platform, \r\n    I publish articles related to open-source projects, application security, software development, etc. Also, \r\n    some of my work got featured in various InfoSec & Developer communities & research conferences. You can find \r\n    the details in the featured work section on the website. I'll highly encourage you to visit the HackbotOne \r\n    website.\r\n</p>\r\n<p class=\"text-content\">\r\n    As a hobby love to play PlayStation games in my free time and (WatchDog/WatchDog2) are some of my favourite \r\n    games of all time.\r\n</p>",
+        "copyright": "Copyright © 2022 ANSHUMAN. ALL RIGHTS RESERVED.",
+        "github": "https://github.com/anshumanpattnaik/",
+        "twitter": "https://twitter.com/anspattnaik",
+        "linkedin": "https://www.linkedin.com/in/anshuman123/",
+        "facebook": "https://www.facebook.com/Hackbot0ne/",
+        "instagram": "https://www.instagram.com/anshuman.pattnaik",
+        "published_date": "2021-12-31 20:31:36",
+        "last_updated_date": "2022-01-06 20:10:10"
+    }
+]

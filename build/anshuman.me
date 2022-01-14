@@ -1,0 +1,26 @@
+upstream anshuman_me_server {
+    server unix:/opt/anshuman.me/my-portfolio/run/gunicorn.sock fail_timeout=0;
+}
+server {
+    listen 80;
+    server_name anshuman.me;
+
+    client_max_body_size 4G;
+
+    access_log /opt/anshuman.me/my-portfolio/logs/nginx-access.log;
+    error_log /opt/anshuman.me/my-portfolio/logs/nginx-error.log;
+
+    location /static/ {
+        alias /opt/anshuman.me/my-portfolio/static/;
+    }
+
+    location / {
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_redirect off;
+        if (!-f $request_filename) {
+            proxy_pass http://anshuman_me_server;
+            break;
+        }
+    }
+}

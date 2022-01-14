@@ -1,0 +1,152 @@
+[
+    {
+        "platform_id": "programming",
+        "domain": "Python",
+        "domain_url": "https://www.python.org/"
+    },
+    {
+        "platform_id": "programming",
+        "domain": "Java",
+        "domain_url": "https://www.java.com/en/"
+    },
+    {
+        "platform_id": "programming",
+        "domain": "JavaScript",
+        "domain_url": "https://www.javascript.com/"
+    },
+    {
+        "platform_id": "programming",
+        "domain": "GraphQL",
+        "domain_url": "https://graphql.org/"
+    },
+    {
+        "platform_id": "mobile",
+        "domain": "Android",
+        "domain_url": "https://www.android.com/intl/en_in/"
+    },
+    {
+        "platform_id": "mobile",
+        "domain": "React-Native",
+        "domain_url": "https://reactnative.dev/"
+    },
+    {
+        "platform_id": "web_framework",
+        "domain": "Django",
+        "domain_url": "https://www.djangoproject.com/"
+    },
+    {
+        "platform_id": "web_framework",
+        "domain": "React/Redux",
+        "domain_url": "https://reactjs.org/"
+    },
+    {
+        "platform_id": "back_end",
+        "domain": "Node.js",
+        "domain_url": "https://nodejs.org/en/"
+    },
+    {
+        "platform_id": "back_end",
+        "domain": "Django REST framework",
+        "domain_url": "https://www.django-rest-framework.org/"
+    },
+    {
+        "platform_id": "back_end",
+        "domain": "Python Flask",
+        "domain_url": "https://flask.palletsprojects.com/en/2.0.x/"
+    },
+    {
+        "platform_id": "database",
+        "domain": "PostgreSQL",
+        "domain_url": "https://www.postgresql.org/"
+    },
+    {
+        "platform_id": "database",
+        "domain": "MongoDB",
+        "domain_url": "https://www.mongodb.com/"
+    },
+    {
+        "platform_id": "database",
+        "domain": "MySQL",
+        "domain_url": "https://www.mysql.com/"
+    },
+    {
+        "platform_id": "database",
+        "domain": "SQLite",
+        "domain_url": "https://www.sqlite.org/index.html"
+    },
+    {
+        "platform_id": "database",
+        "domain": "Realm",
+        "domain_url": "https://realm.io/"
+    },
+    {
+        "platform_id": "ci_cd",
+        "domain": "Gitlab CI/CD",
+        "domain_url": "https://docs.gitlab.com/ee/ci/"
+    },
+    {
+        "platform_id": "ci_cd",
+        "domain": "Docker",
+        "domain_url": "https://www.docker.com/"
+    },
+    {
+        "platform_id": "ci_cd",
+        "domain": "Kubernetes",
+        "domain_url": "https://kubernetes.io/"
+    },
+    {
+        "platform_id": "ci_cd",
+        "domain": "Travis-CI",
+        "domain_url": "https://travis-ci.org/"
+    },
+    {
+        "platform_id": "cloud_platform",
+        "domain": "Google Cloud Platform",
+        "domain_url": "https://cloud.google.com/"
+    },
+    {
+        "platform_id": "cloud_platform",
+        "domain": "Firebase",
+        "domain_url": "https://firebase.google.com/"
+    },
+    {
+        "platform_id": "cloud_platform",
+        "domain": "Heroku",
+        "domain_url": "https://www.heroku.com/"
+    },
+    {
+        "platform_id": "web_server",
+        "domain": "Nginx",
+        "domain_url": "https://www.nginx.com/"
+    },
+    {
+        "platform_id": "web_server",
+        "domain": "Apache",
+        "domain_url": "https://www.apache.org/"
+    },
+    {
+        "platform_id": "security",
+        "domain": "Burp Suite",
+        "domain_url": "https://portswigger.net/burp"
+    },
+    {
+        "platform_id": "security",
+        "domain": "Wireshark",
+        "domain_url": "https://www.wireshark.org/"
+    },
+    {
+        "platform_id": "security",
+        "domain": "Nmap",
+        "domain_url": "https://nmap.org/"
+    },
+    {
+        "platform_id": "security",
+        "domain": "Sqlmap",
+        "domain_url": "https://sqlmap.org/"
+    },
+    {
+        "platform_id": "security",
+        "domain": "Frida",
+        "domain_url": "https://frida.re/"
+    }
+]

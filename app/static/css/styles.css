@@ -569,10 +569,17 @@ label {
     margin: 2vw;
     cursor: pointer;
 }
-.footer > .container > .email {
+.footer > .container > p > .email {
     font-family: SpartanBold, serif;
     font-size: 1vw;
     color: var(--red);
+    text-decoration: none;
+    transition: .3s;
+    margin-top: 5vw;
+}
+.footer > .container > p > .email:hover {
+    cursor: pointer;
+    color: var(--light-red);
 }
 .footer > .copyrights {
     height: 10vh;
@@ -938,9 +945,9 @@ label {
         margin: 5vw;
         cursor: pointer;
     }
-    .footer > .container > .email {
+    .footer > .container > p > .email {
         font-size: 4vw;
-        margin-top: 10vw;
+        margin-top: 15vw;
     }
     .footer > .copyrights {
         height: 10vh;

@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# Name of the application
+NAME="anshuman.me"
+
+# Django project directory
+DJANGODIR=/opt/anshuman.me/my-portfolio
+
+# Virtual Env directory
+VIRTUAL_ENV=$DJANGODIR/venv
+
+# we will communicate using this unix socket
+SOCKFILE=$DJANGODIR/run/gunicorn.sock
+
+# the user to run as
+USER=hackbotone
+
+# the group to run as
+GROUP=hackbotone
+
+# how many worker processes should Gunicorn spawn
+NUM_WORKERS=3
+
+# which settings file should Django use
+DJANGO_SETTINGS_MODULE=portfolio.settings
+
+# WSGI module name
+DJANGO_WSGI_MODULE=portfolio.wsgi
+# shellcheck disable=SC2006
+echo "Starting $NAME as `whoami`"
+
+# Activate the virtual environment
+source $VIRTUAL_ENV/bin/activate
+export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+export PYTHONPATH=$DJANGODIR:$PYTHONPATH
+
+# Create the run directory if it doesn't exist
+RUNDIR=$(dirname $SOCKFILE)
+test -d "$RUNDIR" || mkdir -p "$RUNDIR"
+
+# Start your Django Unicorn
+exec $VIRTUAL_ENV/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
+--name $NAME \
+--workers $NUM_WORKERS \
+--user=$USER --group=$GROUP \
+--bind=unix:$SOCKFILE \
+--log-level=debug \
+--log-file=-
