@@ -1,0 +1,38 @@
+[
+    {
+        "platform_id": "programming",
+        "platform": "Programming Language"
+    },
+    {
+        "platform_id": "mobile",
+        "platform": "Mobile Platform"
+    },
+    {
+        "platform_id": "web_framework",
+        "platform": "Web Framework"
+    },
+    {
+        "platform_id": "back_end",
+        "platform": "Back End"
+    },
+    {
+        "platform_id": "database",
+        "platform": "Database"
+    },
+    {
+        "platform_id": "ci_cd",
+        "platform": "CI/CD"
+    },
+    {
+        "platform_id": "cloud_platform",
+        "platform": "Cloud Platform"
+    },
+    {
+        "platform_id": "web_server",
+        "platform": "WebServer"
+    },
+    {
+        "platform_id": "security",
+        "platform": "Security Tools"
+    }
+]
