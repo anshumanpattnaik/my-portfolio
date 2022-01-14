@@ -17,7 +17,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DEBUG = (bool(int(os.environ.get('DEBUG'))))
 
 # ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
-ALLOWED_HOSTS = ['anshuman.me']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -72,8 +72,8 @@ DATABASES = {
         "NAME": os.environ.get('DATABASE_NAME'),
         "USER": os.environ.get('DATABASE_USER'),
         "PASSWORD": os.environ.get('DATABASE_PASSWORD'),
-        "HOST": os.environ.get('DATABASE_HOST', 'localhost'),
-        "PORT": os.environ.get('DATABASE_PORT', '5432'),
+        "HOST": os.environ.get('DATABASE_HOST'),
+        "PORT": os.environ.get('DATABASE_PORT'),
     }
 }
 
@@ -112,7 +112,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
