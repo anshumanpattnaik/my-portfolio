@@ -7,6 +7,9 @@ server {
 
     client_max_body_size 4G;
 
+    access_log /opt/anshuman.me/my-portfolio/logs/nginx-access.log;
+    error_log /opt/anshuman.me/my-portfolio/logs/nginx-error.log;
+
     location /static/ {
         alias /opt/anshuman.me/my-portfolio/staticfiles/;
     }

@@ -13,10 +13,10 @@ VIRTUAL_ENV=$DJANGODIR/venv
 SOCKFILE=$DJANGODIR/run/gunicorn.sock
 
 # the user to run as
-USER=anshuman.me
+USER=anshuman
 
 # the group to run as
-GROUP=anshuman.me
+GROUP=anshuman
 
 # how many worker processes should Gunicorn spawn
 NUM_WORKERS=3
