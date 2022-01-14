@@ -2,8 +2,9 @@ name: Continuous Integration and Delivery
 on: [push]
 jobs:
   build:
-    name: build
+    name: Build & Deploy
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: Checkout master
         uses: actions/checkout@v1
