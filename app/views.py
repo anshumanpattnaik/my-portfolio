@@ -19,8 +19,7 @@ def index(request):
             "skills": tech_skills,
             "projects": db_client.fetch_projects(),
             "profile": db_client.fetch_profile()[0],
-            "blogs": db_client.fetch_blogs(),
-            "nav_menu": Constants.NAV_MENU
+            "blogs": db_client.fetch_blogs()
         }
         return render(request, 'index.html', context)
 
@@ -29,7 +28,6 @@ def projects(request):
     with DBClient() as db_client:
         context = {
             "projects": db_client.fetch_projects(),
-            "profile": db_client.fetch_profile()[0],
-            "nav_menu": Constants.NAV_MENU
+            "profile": db_client.fetch_profile()[0]
         }
         return render(request, 'projects.html', context)
