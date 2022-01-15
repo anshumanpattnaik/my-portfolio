@@ -1,7 +1,6 @@
 ## Overview
 
-A portfolio site is essential for every software developer to showcase projects, skills, etc. And I have built mine to 
-showcase my project work that I did in the past.
+A portfolio site is essential for every software developer to showcase projects, skills, etc. And I have built mine to showcase my open source project works.
 
 <img src="thumbnail/Thumbnail.png" alt="">
 
