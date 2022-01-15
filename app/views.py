@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-from app.core.Constants import Constants
 from app.core.clients.DBClient import DBClient
 
 
