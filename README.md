@@ -1,7 +1,7 @@
 ## Overview
 
 A portfolio site is essential for every software developer to showcase projects, skills, etc. And I have built mine to 
-showcase the work & skills that I did in the past.
+showcase my project work that I did in the past.
 
 <img src="thumbnail/Thumbnail.png" alt="">
 
@@ -47,7 +47,7 @@ pip3 install -r requirements.txt
 
 Before running migrations first set up the env file in `settings.py`. 
 
-Replacing the below line at `Line no 8`.
+Replace the below line at `Line no 8`.
 
 `load_dotenv(os.path.join(BASE_DIR, 'dev_env/.env'))`
 
