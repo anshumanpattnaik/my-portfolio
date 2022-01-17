@@ -22,7 +22,7 @@
                      onclick="window.open('{{ profile.instagram }}', '_blank')"/>
             </div>
             <div class="button-container">
-                <button class="projects-btn" onclick="window.location.replace('/projects')">Projects</button>
+                <button class="projects-btn" onclick="window.location.href='/projects'">Projects</button>
             </div>
         </div>
     </section>
@@ -74,7 +74,7 @@
             {% endfor %}
         </div>
         <p class="view-projects">
-            <button onclick="window.location.replace('/projects')">VIEW ALL PROJECTS</button>
+            <button onclick="window.location.href='/projects'">VIEW ALL PROJECTS</button>
         </p>
     </section>
     <section class="blogs" id="blogs">
@@ -93,7 +93,7 @@
             {% endfor %}
         </div>
         <p class="read-blogs">
-            <button onclick="window.open('https://hackbotone.com/blogs/page/1')">READ BLOGS</button>
+            <button onclick="window.location.href='https://hackbotone.com/blogs/page/1'">READ BLOGS</button>
         </p>
     </section>
     {% include "footer_layout.html" %}
