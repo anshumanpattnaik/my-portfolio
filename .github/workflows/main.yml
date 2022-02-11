@@ -39,19 +39,14 @@ jobs:
           scp  -o StrictHostKeyChecking=no -r ./.env  root@${{ secrets.VPS_IP_ADDRESS }}:/opt/anshuman.me/my-portfolio
           ssh -o StrictHostKeyChecking=no root@${{ secrets.VPS_IP_ADDRESS }} << 'ENDSSH'
             cd /opt/anshuman.me/my-portfolio
-            rm -rf venv
             git pull origin main --force
-            python3 -m venv venv
             source ./venv/bin/activate
             pip3 install --upgrade pip
             pip3 install wheel
             pip3 install -r requirements.txt
             bash ./build/migrations.sh
-            [ -f /etc/nginx/sites-available/anshuman.me ] || mv build/anshuman.me /etc/nginx/sites-available/
-            [ -f /etc/supervisor/conf.d/anshuman.me.conf ] || mv build/anshuman.me.conf /etc/supervisor/conf.d/
             chmod +x ./deploy/start_gunicorn
             chmod u+x ./terminate.sh
             sudo service supervisor restart
-            [ -f /etc/nginx/sites-enabled/anshuman.me ] || sudo ln -s /etc/nginx/sites-available/anshuman.me /etc/nginx/sites-enabled/anshuman.me
             sudo nginx -t && sudo service nginx reload
           ENDSSH
